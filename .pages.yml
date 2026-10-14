@@ -41,7 +41,7 @@ content:
 
       # ───────── 채널 ─────────
       - name: channels
-        label: 채널 (루카스를 만나는 곳)
+        label: 채널 (루카스의 다양한 채널)
         type: object
         list: true
         fields:
