@@ -20,3 +20,4 @@
 
 ## 고치지 않아도 되는 파일
 `build.py`, `main.js`, `style.css`, `netlify.toml`, `.pages.yml`
+
