@@ -1,5 +1,4 @@
-# EVEREYWHERE 홈페이지 제작
-
+# Cloudflare 적용건
 ## 내용 수정은 Pages CMS에서 (추천)
 1. https://app.pagescms.org 접속 → GitHub로 로그인
 2. 처음 한 번: GitHub App 설치 → 이 저장소 선택 (비공개 저장소도 OK)
