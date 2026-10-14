@@ -49,17 +49,6 @@
   .head h2{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.03em;margin-top:6px}
   .head p{color:var(--muted);font-size:15px;max-width:380px}
 
-  /* CHANNELS */
-  .channels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .ch{border:1.5px solid var(--line);border-radius:20px;padding:22px;transition:.2s;display:flex;flex-direction:column;gap:30px}
-  .ch:hover{border-color:var(--blue);transform:translateY(-3px)}
-  .ch.main{background:var(--ink);color:#fff;border-color:var(--ink)}
-  .ch .top{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;color:var(--muted)}
-  .ch.main .top{color:var(--neon)}
-  .ch b{font-size:19px;letter-spacing:-.02em}
-  .arrow{width:30px;height:30px;border-radius:50%;background:var(--soft);display:grid;place-items:center;color:var(--blue);font-size:14px}
-  .ch.main .arrow{background:var(--neon);color:var(--ink)}
-
   /* VIDEOS */
   #videos{background:var(--soft)}
   .tabs{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
@@ -101,6 +90,17 @@
   .guide div.t{padding:16px 18px 20px}
   .tag{font-size:11px;font-weight:800;color:var(--blue);letter-spacing:.08em}
   .guide h3{font-size:17px;margin-top:6px;letter-spacing:-.02em}
+
+  /* CHANNELS */
+  .channels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .ch{border:1.5px solid var(--line);border-radius:20px;padding:22px;transition:.2s;display:flex;flex-direction:column;gap:30px}
+  .ch:hover{border-color:var(--blue);transform:translateY(-3px)}
+  .ch.main{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .ch .top{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;color:var(--muted)}
+  .ch.main .top{color:var(--neon)}
+  .ch b{font-size:19px;letter-spacing:-.02em}
+  .arrow{width:30px;height:30px;border-radius:50%;background:var(--soft);display:grid;place-items:center;color:var(--blue);font-size:14px}
+  .ch.main .arrow{background:var(--neon);color:var(--ink)}
 
   /* CONTACT */
   .contact{background:var(--ink);color:#fff;border-radius:28px;padding:48px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
