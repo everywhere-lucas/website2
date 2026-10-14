@@ -11,7 +11,7 @@ content:
     fields:
       # ───────── 기본 정보 ─────────
       - name: site_url
-        label: 사이트 주소 (Netlify 주소)
+        label: 사이트 주소 (CloudFlare 주소)
         type: string
       - name: email
         label: 문의 이메일
