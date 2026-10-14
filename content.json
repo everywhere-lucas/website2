@@ -100,8 +100,8 @@
         "en": "Main channel"
       },
       "handle": {
-        "ko": "Instagram @everywhere.lucas",
-        "en": "Instagram @everywhere.lucas"
+        "ko": "Insta@everywhere.lucas",
+        "en": "Insta @everywhere.lucas"
       },
       "url": "https://instagram.com/everywhere.lucas",
       "main": true,
@@ -109,16 +109,16 @@
     },
     {
       "name": {
-        "ko": "먹눈사람",
+        "ko": "먹눈사람 | 대전맛집•대전카페•대전핫플•대전여행",
         "en": "food.snowman"
       },
       "label": {
-        "ko": "먹눈사람 | 대전맛집•대전카페•대전핫플•대전여행",
+        "ko": "대전여행",
         "en": "Daejeon food, cafés & hot spots"
       },
       "handle": {
-        "ko": "Instagram @food.snowman",
-        "en": "Instagram @food.snowman"
+        "ko": "Insta @food.snowman",
+        "en": "Insta @food.snowman"
       },
       "url": "https://instagram.com/food.snowman",
       "main": false,
@@ -130,7 +130,7 @@
         "en": "Luca | Japan Travel • Travel Hacks"
       },
       "label": {
-        "ko": "일본여행 계정",
+        "ko": "일본여행",
         "en": "Japan travel account"
       },
       "handle": {
@@ -181,11 +181,11 @@
         "en": "Lucas's World Travel Archive"
       },
       "label": {
-        "ko": "여행블로그",
+        "ko": "블로그",
         "en": "Lucas's World Travel Archive"
       },
       "handle": {
-        "ko": "루카스의 세계여행 아카이브",
+        "ko": "세계여행의 다양한 여행정보 집합소",
         "en": "Travel blog"
       },
       "url": "https://blog.naver.com/lucas_travel",
