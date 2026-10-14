@@ -1,0 +1,74 @@
+{
+  "seo": {
+    "ko": {
+      "title": "루카스 여행 | 대전 맛집 · 일본 · 유럽 여행 숏폼",
+      "description": "대전 맛집·카페·핫플부터 일본, 유럽 여행까지. 여행 크리에이터 루카스의 인기 숏폼 영상과 여행 꿀팁, 추천 여행템을 한곳에서 확인하세요."
+    },
+    "en": {
+      "title": "Lucas Travel | Daejeon, Japan & Europe Travel Shorts",
+      "description": "Korean travel creator Lucas: local food and cafés in Daejeon, plus trips to Japan and Europe. Top travel shorts, guides and packing picks in one place."
+    }
+  },
+  "text": {
+    "ko": {
+      "nav_channels": "채널",
+      "nav_videos": "인기 영상",
+      "nav_guides": "여행 가이드",
+      "nav_items": "추천템",
+      "nav_contact": "문의",
+      "hero_title": "뭐 먹지?<br><em>어디 가지?</em>",
+      "hero_desc": "아시아부터 유럽, 미주, 오세아니아까지 직접 가본 곳만 골라서 추천해드려요",
+      "hero_btn": "인기 영상 보기 →",
+      "photo": "프로필 사진 자리",
+      "badge": "📍 Korea → Everywhere",
+      "ch_title": "루카스를 만나는 곳",
+      "ch_desc": "같은 여행, 채널마다 다른 방식으로 담고 있어요.",
+      "vid_title": "나라별 인기 여행 영상",
+      "vid_desc": "조회수 가장 많이 나온 숏폼만 골랐어요. 누르면 바로 영상으로 이동해요.",
+      "guide_title": "여행 가이드",
+      "guide_desc": "블로그에 자세히 정리한 여행 정보 모음.",
+      "item_title": "루카스의 여행 가방 속",
+      "item_desc": "여행마다 꼭 챙기는 것들. 직접 써보고 남긴 것만 골랐어요.",
+      "buy": "보러가기 →",
+      "disclose": "※ 일부 링크는 제휴 링크로, 구매 시 일정 수수료를 받을 수 있어요.",
+      "soon": "준비중",
+      "empty": "곧 업데이트됩니다 ✈️",
+      "map": "지도",
+      "no_img": "썸네일",
+      "ct_title": "함께 <em>여행</em>을 만들어요",
+      "ct_desc": "광고 · 협찬 · 콘텐츠 협업 문의는 메일로 연락주세요.",
+      "ct_btn": "메일 보내기 ✉",
+      "promise": "좋은 여행은 거창한 계획보다 믿을 만한 정보 하나에서 시작된다고 생각해요. 제가 직접 겪은 시행착오를 줄여서, 여러분의 여행이 조금 더 쉬워지도록 기록합니다."
+    },
+    "en": {
+      "nav_channels": "Channels",
+      "nav_videos": "Videos",
+      "nav_guides": "Guides",
+      "nav_items": "Gear",
+      "nav_contact": "Contact",
+      "hero_title": "Travel,<br><em>short & useful</em>",
+      "hero_desc": "From local food in Daejeon, Korea to Japan and Europe — only places I've actually been, in short videos.",
+      "hero_btn": "Watch top videos →",
+      "photo": "Profile photo",
+      "badge": "📍 Korea → Everywhere",
+      "ch_title": "Where to find me",
+      "ch_desc": "Same trips, told differently on each channel.",
+      "vid_title": "Most-watched travel shorts",
+      "vid_desc": "My most-viewed shorts by country. Tap to watch.",
+      "guide_title": "Travel guides",
+      "guide_desc": "In-depth travel posts from my blog.",
+      "item_title": "What's in my travel bag",
+      "item_desc": "Things I pack on every trip — only stuff I've actually used and kept.",
+      "buy": "Check it out →",
+      "disclose": "* Some links are affiliate links; I may earn a small commission at no extra cost to you.",
+      "soon": "Soon",
+      "empty": "Coming soon ✈️",
+      "map": "Map",
+      "no_img": "Thumbnail",
+      "ct_title": "Let's create <em>together</em>",
+      "ct_desc": "For ads, sponsorships and collaborations, drop me an email.",
+      "ct_btn": "Send email ✉",
+      "promise": "I believe a good trip starts not with a big plan but with one piece of information you can trust. I record my own trial and error so your trip can be a little easier."
+    }
+  }
+}
