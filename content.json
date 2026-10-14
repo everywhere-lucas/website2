@@ -62,7 +62,7 @@
         "ko": "남아공",
         "en": "South Africa"
       },
-      "hide": false
+      "hide": true
     },
     {
       "code": "AUS",
@@ -223,59 +223,122 @@
     {
       "region": "Europe",
       "title": {
-        "ko": "피렌체의 낭만은 낮보다는 밤",
+        "ko": "피렌체 베키오다리의 낭만",
         "en": "The real romance of Florence begins after dark"
       },
       "place": {
         "ko": "피렌체",
         "en": "Florence, Italy 🇮🇹"
       },
-      "views": 520000,
+      "views": 60000,
       "url": "https://www.instagram.com/reel/DdOMHglOvEt/?xtok=MTZuZGhiY3F5N2JxbA==",
       "map": "#",
       "hide": false
     },
     {
-      "region": "Japan",
+      "region": "Europe",
       "title": {
-        "ko": "작업1",
-        "en": "Skip the famous bakery, go here"
+        "ko": "파리의 마라탕 맛집이요?",
+        "en": "Maratang in Paris?"
       },
       "place": {
-        "ko": "작업1",
-        "en": "Seo-gu, Daejeon"
+        "ko": "프랑스, 파리",
+        "en": "France, Paris"
       },
-      "views": 1,
-      "url": "https://www.instagram.com/reel/DSEPpvZgbt5/",
+      "views": 25000,
+      "url": "https://www.instagram.com/reel/Dc3DJrwOoii/ ",
       "map": "#",
       "hide": false
     },
     {
-      "region": "korea",
+      "region": "Europe",
       "title": {
-        "ko": "대전 당일치기 완벽 코스",
-        "en": "Perfect day trip in Daejeon"
+        "ko": "프랑스의 반전매력",
+        "en": "Paris"
       },
       "place": {
-        "ko": "대전",
-        "en": "Daejeon"
+        "ko": "프랑스, 파리",
+        "en": "France, Paris"
       },
-      "views": 180000,
-      "url": "#",
+      "views": 10000,
+      "url": "https://www.instagram.com/reel/DdrCeXYIFP4/",
       "hide": false
     },
     {
-      "region": "korea",
+      "region": "Japan",
       "title": {
-        "ko": "비 오는 날 대전 실내 데이트",
-        "en": "Rainy-day spots in Daejeon"
+        "ko": "공항에서 파는 케익",
+        "en": "Cake"
       },
       "place": {
-        "ko": "대전 유성구",
-        "en": "Yuseong-gu, Daejeon"
+        "ko": "일본, 삿포로",
+        "en": "Japan, Sapporo"
       },
-      "views": 120000,
-      "url": "#",
+      "views": 466999,
+      "url": "https://www.instagram.com/reel/DSEPpvZgbt5/ ",
+      "hide": false
+    },
+    {
+      "region": "Japan",
+      "title": {
+        "ko": "포토스팟",
+        "en": "photo spot"
+      },
+      "place": {
+        "ko": "일본, 삿포로",
+        "en": "Japan, Sapporo"
+      },
+      "views": 57000,
+      "url": "https://www.instagram.com/reel/DR_sEpWAYQs/ ",
+      "hide": false
+    },
+    {
+      "region": "Japan",
+      "title": {
+        "ko": "이걸 어떻게 안사요?"
+      },
+      "place": {
+        "ko": "일본, 삿포로",
+        "en": "Japan, Sapporo"
+      },
+      "views": 12000,
+      "url": "https://www.instagram.com/reel/DSLz1lZgYyK/ ",
+      "hide": false
+    },
+    {
+      "region": "Korea",
+      "title": {
+        "ko": "공항에서 샤넬받는 방법"
+      },
+      "place": {
+        "ko": "한국, 인천공항"
+      },
+      "views": 4609997,
+      "url": "https://www.instagram.com/reel/Dcu8ba-OGVj/ ",
+      "hide": false
+    },
+    {
+      "region": "Korea",
+      "title": {
+        "ko": "아시아나 특이점"
+      },
+      "place": {
+        "ko": "한국, 인천공항"
+      },
+      "views": 49000,
+      "url": "https://www.instagram.com/reel/DbWp4hLB92l/ ",
+      "hide": false
+    },
+    {
+      "region": "Korea",
+      "title": {
+        "ko": "군밤축제"
+      },
+      "place": {
+        "ko": "한국, 인천공항"
+      },
+      "views": 12000,
+      "url": "https://www.instagram.com/reel/DUevqRagdmt/ ",
       "hide": false
     }
   ],
@@ -290,7 +353,7 @@
       "hide": false
     },
     {
-      "tag": "JAPAN",
+      "tag": "Japan",
       "title": {
         "ko": "일본 처음 가는 사람 필독",
         "en": "First trip to Japan? Read this"
