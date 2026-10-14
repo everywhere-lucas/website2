@@ -295,7 +295,8 @@
     {
       "region": "Japan",
       "title": {
-        "ko": "이걸 어떻게 안사요?"
+        "ko": "이걸 어떻게 안사요?",
+        "en": "Japan"
       },
       "place": {
         "ko": "일본, 삿포로",
@@ -308,10 +309,12 @@
     {
       "region": "Korea",
       "title": {
-        "ko": "공항에서 샤넬받는 방법"
+        "ko": "공항에서 샤넬받는 방법",
+        "en": "Korea"
       },
       "place": {
-        "ko": "한국, 인천공항"
+        "ko": "한국, 인천공항",
+        "en": "Korea"
       },
       "views": 4609997,
       "url": "https://www.instagram.com/reel/Dcu8ba-OGVj/ ",
@@ -320,10 +323,12 @@
     {
       "region": "Korea",
       "title": {
-        "ko": "아시아나 특이점"
+        "ko": "아시아나 특이점",
+        "en": "Korea"
       },
       "place": {
-        "ko": "한국, 인천공항"
+        "ko": "한국, 인천공항",
+        "en": "Korea"
       },
       "views": 49000,
       "url": "https://www.instagram.com/reel/DbWp4hLB92l/ ",
@@ -332,10 +337,12 @@
     {
       "region": "Korea",
       "title": {
-        "ko": "군밤축제"
+        "ko": "군밤축제",
+        "en": "Korea"
       },
       "place": {
-        "ko": "한국, 인천공항"
+        "ko": "한국, 인천공항",
+        "en": "Korea"
       },
       "views": 12000,
       "url": "https://www.instagram.com/reel/DUevqRagdmt/ ",
