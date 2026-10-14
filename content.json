@@ -10,6 +10,7 @@
         "ko": "한국",
         "en": "Korea"
       },
+      "photo": "images/그림1.jpg",
       "hide": false
     },
     {
@@ -18,6 +19,7 @@
         "ko": "일본",
         "en": "Japan"
       },
+      "photo": "images/제목 없는 디자인 (1).png",
       "hide": false
     },
     {
@@ -26,6 +28,7 @@
         "ko": "프랑스",
         "en": "France"
       },
+      "photo": "images/2.jpg",
       "hide": false
     },
     {
@@ -34,6 +37,7 @@
         "ko": "이탈리아",
         "en": "Italy"
       },
+      "photo": "images/제목 없는 디자인.png",
       "hide": false
     },
     {
