@@ -73,7 +73,7 @@ content:
         type: object
         list: true
         fields:
-          - { name: id, label: "탭 코드 (영어 소문자, 예: korea)", type: string }
+          - { name: id, label: "탭 코드 (영어 소문자, 예: Korea)", type: string }
           - name: name
             label: 탭 이름
             type: object
@@ -87,7 +87,7 @@ content:
         type: object
         list: true
         fields:
-          - { name: region, label: "나라 탭 코드 (korea / japan / europe)", type: string }
+          - { name: region, label: "나라 탭 코드 (Korea / Japan / Europe)", type: string }
           - name: title
             label: 영상 제목
             type: object
