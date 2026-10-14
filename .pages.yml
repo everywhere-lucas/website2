@@ -108,7 +108,7 @@ content:
 
       # ───────── 여행 가이드 ─────────
       - name: guides
-        label: 여행 가이드 (블로그 글)
+        label: 여행 가이드 (구글지도)
         type: object
         list: true
         fields:
