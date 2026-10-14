@@ -132,7 +132,7 @@
 /* collage */
 .collage{position:relative;aspect-ratio:1/1;width:100%;max-width:480px;justify-self:end}
 .flight{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.flight path{fill:none;stroke:rgba(255,255,255,.55);stroke-width:2;stroke-dasharray:2 10;stroke-linecap:round;animation:dash 6s linear infinite reverse}
+.flight path{fill:none;stroke:rgba(255,255,255,.55);stroke-width:2;stroke-dasharray:2 10;stroke-linecap:round;animation:dash 6s linear infinite}
 @keyframes dash{to{stroke-dashoffset:-120}}
 .plane{position:absolute;right:-6px;top:-14px;font-size:30px;color:var(--neon);transform:rotate(-20deg);animation:bob 3s ease-in-out infinite}
 .tile{position:absolute;margin:0;border-radius:18px;overflow:hidden;background:#fff;padding:7px 7px 34px;box-shadow:0 20px 40px rgba(5,15,80,.35);transform:rotate(var(--r));animation:float 6s ease-in-out infinite;animation-delay:var(--dl);transition:transform .35s}
@@ -160,7 +160,7 @@
 
 /* marquee band */
 .marquee{position:relative;z-index:3;margin:-34px -2% 0;background:var(--neon);color:var(--ink);transform:rotate(-2deg);overflow:hidden;padding:16px 0;box-shadow:0 10px 30px rgba(14,20,48,.15)}
-.marquee .track{display:flex;width:max-content;animation:roll 28s linear infinite}
+.marquee .track{display:flex;width:max-content;animation:roll 28s linear infinite reverse}
 .marquee span{font-weight:900;font-size:22px;letter-spacing:.06em;white-space:nowrap;padding-right:8px}
 @keyframes roll{to{transform:translateX(-50%)}}
 
