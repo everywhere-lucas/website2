@@ -1,0 +1,351 @@
+{
+  "site_url": "https://everywhere-lucas.netlify.app",
+  "email": "lucashere.ytube@gmail.com",
+  "destinations": [
+    {
+      "code": "KOR",
+      "city": {
+        "ko": "한국",
+        "en": "Korea"
+      },
+      "hide": false
+    },
+    {
+      "code": "JPN",
+      "city": {
+        "ko": "일본",
+        "en": "Japan"
+      },
+      "hide": false
+    },
+    {
+      "code": "FRA",
+      "city": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "hide": false
+    },
+    {
+      "code": "ITA",
+      "city": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "hide": false
+    },
+    {
+      "code": "IDN",
+      "city": {
+        "ko": "인도네시아",
+        "en": "Indonesia"
+      },
+      "hide": false
+    },
+    {
+      "code": "THA",
+      "city": {
+        "ko": "태국",
+        "en": "Thailand"
+      },
+      "hide": false
+    },
+    {
+      "code": "ZAF",
+      "city": {
+        "ko": "남아공",
+        "en": "South Africa"
+      },
+      "hide": false
+    },
+    {
+      "code": "AUS",
+      "city": {
+        "ko": "호주",
+        "en": "Australia"
+      },
+      "hide": false
+    },
+    {
+      "code": "DEU",
+      "city": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "hide": false
+    },
+    {
+      "code": "CHN",
+      "city": {
+        "ko": "중국",
+        "en": "China"
+      },
+      "hide": false
+    }
+  ],
+  "channels": [
+    {
+      "name": {
+        "ko": "루카스 | 여행",
+        "en": "Lucas | Travel"
+      },
+      "label": {
+        "ko": "메인 채널",
+        "en": "Main channel"
+      },
+      "handle": {
+        "ko": "Instagram @everywhere.lucas",
+        "en": "Instagram @everywhere.lucas"
+      },
+      "url": "https://instagram.com/everywhere.lucas",
+      "main": true,
+      "hide": false
+    },
+    {
+      "name": {
+        "ko": "먹눈사람",
+        "en": "food.snowman"
+      },
+      "label": {
+        "ko": "먹눈사람 | 대전맛집•대전카페•대전핫플•대전여행",
+        "en": "Daejeon food, cafés & hot spots"
+      },
+      "handle": {
+        "ko": "Instagram @food.snowman",
+        "en": "Instagram @food.snowman"
+      },
+      "url": "https://instagram.com/food.snowman",
+      "main": false,
+      "hide": false
+    },
+    {
+      "name": {
+        "ko": "루카(ルカ) | 일본여행 • 여행꿀팁",
+        "en": "Luca | Japan Travel • Travel Hacks"
+      },
+      "label": {
+        "ko": "일본여행 계정",
+        "en": "Japan travel account"
+      },
+      "handle": {
+        "ko": "일본여행 정보",
+        "en": "Japan travel tips"
+      },
+      "url": "https://www.instagram.com/luca.trip.zip/",
+      "main": false,
+      "hide": false
+    },
+    {
+      "name": {
+        "ko": "YouTube",
+        "en": "YouTube"
+      },
+      "label": {
+        "ko": "쇼츠",
+        "en": "Shorts"
+      },
+      "handle": {
+        "ko": "Shorts",
+        "en": "Shorts"
+      },
+      "url": "#",
+      "main": false,
+      "hide": true
+    },
+    {
+      "name": {
+        "ko": "TikTok",
+        "en": "TikTok"
+      },
+      "label": {
+        "ko": "틱톡",
+        "en": "TikTok"
+      },
+      "handle": {
+        "ko": "Short videos",
+        "en": "Short videos"
+      },
+      "url": "https://www.tiktok.com/@lucasontravelon",
+      "main": false,
+      "hide": true
+    },
+    {
+      "name": {
+        "ko": "Blog",
+        "en": "Blog"
+      },
+      "label": {
+        "ko": "루카스의 세계여행 아카이브",
+        "en": "Lucas's World Travel Archive"
+      },
+      "handle": {
+        "ko": "Travel blog",
+        "en": "Travel blog"
+      },
+      "url": "https://blog.naver.com/lucas_travel",
+      "main": false,
+      "hide": false
+    }
+  ],
+  "regions": [
+    {
+      "id": "Korea",
+      "name": {
+        "ko": "한국",
+        "en": "Korea"
+      },
+      "soon": false
+    },
+    {
+      "id": "Japan",
+      "name": {
+        "ko": "일본",
+        "en": "Japan"
+      },
+      "soon": true
+    },
+    {
+      "id": "Europe",
+      "name": {
+        "ko": "유럽",
+        "en": "Europe"
+      },
+      "soon": false
+    }
+  ],
+  "videos": [
+    {
+      "region": "Europe",
+      "title": {
+        "ko": "피렌체의 낭만은 낮보다는 밤",
+        "en": "The real romance of Florence begins after dark"
+      },
+      "place": {
+        "ko": "피렌체",
+        "en": "Florence, Italy 🇮🇹"
+      },
+      "views": 520000,
+      "url": "https://www.instagram.com/reel/DdOMHglOvEt/?xtok=MTZuZGhiY3F5N2JxbA==",
+      "thumb": "images/favicon-48.png",
+      "map": "#",
+      "hide": false
+    },
+    {
+      "region": "Korea",
+      "title": {
+        "ko": "성심당 말고 여기 가세요",
+        "en": "Skip the famous bakery, go here"
+      },
+      "place": {
+        "ko": "대전 서구",
+        "en": "Seo-gu, Daejeon"
+      },
+      "views": 310000,
+      "url": "#",
+      "map": "#",
+      "hide": false
+    },
+    {
+      "region": "korea",
+      "title": {
+        "ko": "대전 당일치기 완벽 코스",
+        "en": "Perfect day trip in Daejeon"
+      },
+      "place": {
+        "ko": "대전",
+        "en": "Daejeon"
+      },
+      "views": 180000,
+      "url": "#",
+      "hide": false
+    },
+    {
+      "region": "korea",
+      "title": {
+        "ko": "비 오는 날 대전 실내 데이트",
+        "en": "Rainy-day spots in Daejeon"
+      },
+      "place": {
+        "ko": "대전 유성구",
+        "en": "Yuseong-gu, Daejeon"
+      },
+      "views": 120000,
+      "url": "#",
+      "hide": false
+    }
+  ],
+  "guides": [
+    {
+      "tag": "TAIWAN",
+      "title": {
+        "ko": "타이베이 먹방지도",
+        "en": "Taipei Google Map"
+      },
+      "url": "https://maps.app.goo.gl/LURqWiFEKocMFKMVA",
+      "img": "images/루카스_대만.png",
+      "hide": false
+    },
+    {
+      "tag": "JAPAN",
+      "title": {
+        "ko": "일본 처음 가는 사람 필독",
+        "en": "First trip to Japan? Read this"
+      },
+      "url": "#",
+      "hide": true
+    },
+    {
+      "tag": "TIP",
+      "title": {
+        "ko": "숏폼 여행 영상 찍는 법",
+        "en": "How I film travel shorts"
+      },
+      "url": "#",
+      "hide": true
+    }
+  ],
+  "items": [
+    {
+      "cat": "ESSENTIAL",
+      "name": {
+        "ko": "여행용 샤워필터",
+        "en": "Travel Shower Filter"
+      },
+      "why": {
+        "ko": "컴팩트한 사이즈로 여행 시 필수아이템 ",
+        "en": "Compact and Convenient – A Must-Have Travel Essential!"
+      },
+      "url": "https://link.coupang.com/a/hPPD1pMjqC",
+      "img": "images/저장.png",
+      "hide": false
+    },
+    {
+      "cat": "TECH",
+      "name": {
+        "ko": " 멀티 어댑터",
+        "en": "Travel adapter"
+      },
+      "why": {
+        "ko": "일본·유럽 둘 다 되는 올인원",
+        "en": "One plug for both Japan and Europe"
+      },
+      "url": "https://link.coupang.com/a/hPTmRKJQey",
+      "img": "images/멀티어탭터.png",
+      "hide": false
+    },
+    {
+      "cat": "ESSENTIAL",
+      "name": {
+        "ko": "압축 파우치",
+        "en": "Sample packing cubes"
+      },
+      "why": {
+        "ko": "캐리어 공간 절반으로 줄여줌",
+        "en": "Halves the space in your luggage"
+      },
+      "url": "https://link.coupang.com/a/hPTRxPVFam",
+      "img": "images/압축파우치.png",
+      "hide": true
+    }
+  ]
+}

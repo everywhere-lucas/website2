@@ -1,0 +1,9 @@
+// Cloudflare 설정 파일 — build.py가 만든 dist 폴더(완성본)를 사이트로 올려요.
+// "name"은 Cloudflare에 만든 프로젝트 이름과 같아야 해요.
+{
+  "name": "website",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}

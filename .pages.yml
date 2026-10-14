@@ -1,0 +1,256 @@
+# Pages CMS 설정 — app.pagescms.org 에서 이 저장소를 열면 아래 메뉴가 보여요.
+media:
+  input: images
+  output: images
+
+content:
+  - name: site
+    label: 홈페이지 내용
+    type: file
+    path: content.json
+    fields:
+      # ───────── 기본 정보 ─────────
+      - name: site_url
+        label: 사이트 주소 (Netlify 주소)
+        type: string
+      - name: email
+        label: 문의 이메일
+        type: string
+      - name: profile_image
+        label: 프로필 사진 (첫 화면 회전 도장 가운데, 정사각형 추천)
+        type: image
+      - name: share_image
+        label: 링크 공유 미리보기 사진 (가로 1200×630 권장)
+        type: image
+
+      # ───────── 첫 화면 사진 콜라주 ─────────
+      - name: destinations
+        label: 첫 화면 여행 사진 (최대 4장 표시, 아래 흐르는 도시 띠에도 사용)
+        type: object
+        list: true
+        fields:
+          - { name: code, label: "도시 코드 (영어 3글자, 예: TYO)", type: string }
+          - name: city
+            label: 도시 이름
+            type: object
+            fields:
+              - { name: ko, label: 한글, type: string }
+              - { name: en, label: 영문, type: string }
+          - { name: photo, label: 여행 사진 (세로 사진 추천), type: image }
+          - { name: hide, label: 사이트에서 숨기기, type: boolean }
+
+      # ───────── 채널 ─────────
+      - name: channels
+        label: 채널 (루카스를 만나는 곳)
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: 채널 이름
+            type: object
+            fields:
+              - { name: ko, label: 한글, type: string }
+              - { name: en, label: 영문, type: string }
+          - name: label
+            label: 설명 (위쪽 작은 글씨)
+            type: object
+            fields:
+              - { name: ko, label: 한글, type: string }
+              - { name: en, label: 영문, type: string }
+          - name: handle
+            label: 아이디/부제 (아래쪽 작은 글씨)
+            type: object
+            fields:
+              - { name: ko, label: 한글, type: string }
+              - { name: en, label: 영문, type: string }
+          - { name: url, label: 링크, type: string }
+          - { name: main, label: 메인 채널로 강조 (검정 카드), type: boolean }
+          - { name: hide, label: 사이트에서 숨기기, type: boolean }
+
+      # ───────── 인기 영상 ─────────
+      - name: regions
+        label: 영상 나라 탭
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "탭 코드 (영어 소문자, 예: korea)", type: string }
+          - name: name
+            label: 탭 이름
+            type: object
+            fields:
+              - { name: ko, label: 한글, type: string }
+              - { name: en, label: 영문, type: string }
+          - { name: soon, label: "'준비중' 표시", type: boolean }
+
+      - name: videos
+        label: 인기 영상
+        type: object
+        list: true
+        fields:
+          - { name: region, label: "나라 탭 코드 (korea / japan / europe)", type: string }
+          - name: title
+            label: 영상 제목
+            type: object
+            fields:
+              - { name: ko, label: 한글, type: string }
+              - { name: en, label: 영문, type: string }
+          - name: place
+            label: 위치
+            type: object
+            fields:
+              - { name: ko, label: 한글, type: string }
+              - { name: en, label: 영문, type: string }
+          - { name: views, label: "조회수 (숫자만, 예: 520000)", type: number }
+          - { name: url, label: 영상 링크 (릴스/쇼츠), type: string }
+          - { name: thumb, label: 썸네일 (세로 9:16), type: image }
+          - { name: map, label: 지도 링크 (없으면 비워두기), type: string }
+          - { name: hide, label: 사이트에서 숨기기, type: boolean }
+
+      # ───────── 여행 가이드 ─────────
+      - name: guides
+        label: 여행 가이드 (블로그 글)
+        type: object
+        list: true
+        fields:
+          - { name: tag, label: "태그 (영어 대문자, 예: JAPAN)", type: string }
+          - name: title
+            label: 글 제목
+            type: object
+            fields:
+              - { name: ko, label: 한글, type: string }
+              - { name: en, label: 영문, type: string }
+          - { name: url, label: 블로그 글 링크, type: string }
+          - { name: img, label: 대표 이미지 (가로형), type: image }
+          - { name: hide, label: 사이트에서 숨기기, type: boolean }
+
+      # ───────── 여행 추천템 ─────────
+      - name: items
+        label: 여행 가방 속 (추천템)
+        type: object
+        list: true
+        fields:
+          - name: cat
+            label: 카테고리
+            type: select
+            options:
+              values: [BAG, TECH, ESSENTIAL, APP, FASHION, ETC]
+          - name: name
+            label: 상품 이름
+            type: object
+            fields:
+              - { name: ko, label: 한글, type: string }
+              - { name: en, label: 영문, type: string }
+          - name: why
+            label: 추천 이유 한 줄
+            type: object
+            fields:
+              - { name: ko, label: 한글, type: string }
+              - { name: en, label: 영문, type: string }
+          - { name: url, label: 구매 링크, type: string }
+          - { name: img, label: 상품 사진 (정사각형), type: image }
+          - { name: hide, label: 사이트에서 숨기기, type: boolean }
+
+  # ───────── 사이트 문구 / 검색 설정 (가끔만 수정) ─────────
+  - name: texts
+    label: 사이트 문구 · 검색 설정
+    type: file
+    path: texts.json
+    fields:
+      - name: seo
+        ...
+      - name: text
+        label: 화면 문구 (<br>은 줄바꿈, <em>강조</em>는 형광색)
+        ...
+              - { name: hero_title, label: "첫 화면 큰 제목", type: string }
+        ...
+
+  # ───────── 사이트 문구 / 검색 설정 (가끔만 수정) ─────────
+  - name: texts
+    label: 사이트 문구 · 검색 설정
+    type: file
+    path: texts.json
+    fields:
+      - name: seo
+        label: 검색 설정
+        type: object
+        fields:
+          - name: ko
+            label: 한글 페이지
+            type: object
+            fields:
+              - { name: title, label: 검색 제목, type: string }
+              - { name: description, label: 검색 소개문, type: text }
+          - name: en
+            label: 영문 페이지
+            type: object
+            fields:
+              - { name: title, label: 검색 제목, type: string }
+              - { name: description, label: 검색 소개문, type: text }
+      - name: text
+        label: 화면 문구 (<br>은 줄바꿈, <em>강조</em>는 형광색)
+        type: object
+        fields:
+          - name: ko
+            label: 한글
+            type: object
+            fields:
+              - { name: nav_channels, type: string }
+              - { name: nav_videos, type: string }
+              - { name: nav_guides, type: string }
+              - { name: nav_items, type: string }
+              - { name: nav_contact, type: string }
+              - { name: hero_title, type: string }
+              - { name: hero_desc, type: string }
+              - { name: hero_btn, type: string }
+              - { name: photo, type: string }
+              - { name: badge, type: string }
+              - { name: ch_title, type: string }
+              - { name: ch_desc, type: string }
+              - { name: vid_title, type: string }
+              - { name: vid_desc, type: string }
+              - { name: guide_title, type: string }
+              - { name: guide_desc, type: string }
+              - { name: item_title, type: string }
+              - { name: item_desc, type: string }
+              - { name: buy, type: string }
+              - { name: disclose, type: string }
+              - { name: soon, type: string }
+              - { name: empty, type: string }
+              - { name: map, type: string }
+              - { name: no_img, type: string }
+              - { name: ct_title, type: string }
+              - { name: ct_desc, type: string }
+              - { name: ct_btn, type: string }
+              - { name: promise, type: string }
+          - name: en
+            label: 영문
+            type: object
+            fields:
+              - { name: nav_channels, type: string }
+              - { name: nav_videos, type: string }
+              - { name: nav_guides, type: string }
+              - { name: nav_items, type: string }
+              - { name: nav_contact, type: string }
+              - { name: hero_title, type: string }
+              - { name: hero_desc, type: string }
+              - { name: hero_btn, type: string }
+              - { name: photo, type: string }
+              - { name: badge, type: string }
+              - { name: ch_title, type: string }
+              - { name: ch_desc, type: string }
+              - { name: vid_title, type: string }
+              - { name: vid_desc, type: string }
+              - { name: guide_title, type: string }
+              - { name: guide_desc, type: string }
+              - { name: item_title, type: string }
+              - { name: item_desc, type: string }
+              - { name: buy, type: string }
+              - { name: disclose, type: string }
+              - { name: soon, type: string }
+              - { name: empty, type: string }
+              - { name: map, type: string }
+              - { name: no_img, type: string }
+              - { name: ct_title, type: string }
+              - { name: ct_desc, type: string }
+              - { name: ct_btn, type: string }
+              - { name: promise, type: string }
