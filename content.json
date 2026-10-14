@@ -173,7 +173,7 @@
     },
     {
       "name": {
-        "ko": "Blog",
+        "ko": "블로그",
         "en": "Blog"
       },
       "label": {
@@ -181,7 +181,7 @@
         "en": "Lucas's World Travel Archive"
       },
       "handle": {
-        "ko": "Travel blog",
+        "ko": "여행 블로그",
         "en": "Travel blog"
       },
       "url": "https://blog.naver.com/lucas_travel",
