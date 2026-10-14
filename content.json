@@ -232,17 +232,17 @@
       "hide": false
     },
     {
-      "region": "Korea",
+      "region": "Japan",
       "title": {
-        "ko": "성심당 말고 여기 가세요",
+        "ko": "작업1",
         "en": "Skip the famous bakery, go here"
       },
       "place": {
-        "ko": "대전 서구",
+        "ko": "작업1",
         "en": "Seo-gu, Daejeon"
       },
-      "views": 310000,
-      "url": "#",
+      "views": 1,
+      "url": "https://www.instagram.com/reel/DSEPpvZgbt5/",
       "map": "#",
       "hide": false
     },
