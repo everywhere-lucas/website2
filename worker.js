@@ -429,6 +429,7 @@ function match(v, skip) {
 }
 function chipRow(label, pairs, cur, pick) {
   if (!pairs.length) return null;
+  pairs = pairs.slice().sort(function (a, b) { return a[0].localeCompare(b[0], 'ko'); }); // 전체 다음은 가나다순
   var row = el('div', { cls: 'lc-chips' });
   row.appendChild(el('button', { cls: 'lc-chip' + (cur ? '' : ' on'), type: 'button', text: '전체', onclick: function () { pick(''); } }));
   pairs.forEach(function (p) {
