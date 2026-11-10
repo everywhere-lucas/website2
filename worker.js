@@ -382,6 +382,7 @@ const EMBED_CSS = String.raw`
 .lc-tag{display:inline-block;font-size:11px;padding:2px 7px;border-radius:6px;background:#eef2ff;color:#1f4bff;margin:2px 3px 0 0}
 .lc-tag.flag{background:#f2f4f7;color:#667085}
 .lc-empty{padding:40px 0;text-align:center;color:#667085}
+.lc-more[hidden],.lc-empty[hidden],.lc [hidden]{display:none !important}
 .lc-more{display:block;margin:22px auto 0;font:inherit;font-size:14px;padding:10px 22px;border-radius:999px;border:1.5px solid #1f4bff;background:#fff;color:#1f4bff;cursor:pointer}
 `;
 
@@ -470,13 +471,29 @@ function render() {
     ]));
   });
   count.textContent = DATA.length ? list.length + '개' : '';
-  more.hidden = list.length <= shown;
-  more.textContent = '더 보기 (' + (list.length - shown) + '개 남음)';
+  var left = list.length - shown;
+  if (left > 0) {
+    more.hidden = false; more.dataset.mode = 'more';
+    more.textContent = '더 보기 (' + left + '개 남음)';
+  } else if (shown > PAGE && list.length > PAGE) {
+    more.hidden = false; more.dataset.mode = 'less';
+    more.textContent = '접기 ↑';
+  } else {
+    more.hidden = true;
+  }
   empty.hidden = list.length > 0;
   empty.textContent = DATA.length ? '조건에 맞는 게시물이 없어요.' : '아직 공개된 게시물이 없습니다.';
 }
 input.addEventListener('input', function (e) { S.q = e.target.value.trim(); shown = PAGE; render(); });
-more.addEventListener('click', function () { shown += PAGE; render(); });
+more.addEventListener('click', function () {
+  if (more.dataset.mode === 'less') {
+    shown = PAGE; render();
+    var top = root.getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo(0, top);
+    return;
+  }
+  shown += PAGE; render();
+});
 fetch(ORIGIN + '/api/catalog').then(function (r) { return r.json(); }).then(function (j) {
   DATA = (j.items || []).sort(function (a, b) { return a.date < b.date ? 1 : -1; });
   render();
