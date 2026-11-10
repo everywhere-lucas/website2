@@ -173,10 +173,10 @@ def page(lang):
   <div class="wrap">
     <a class="logo" href="#">everywhere.<span>lucas</span></a>
     <div class="menu">
-      <a href="#channels">{t['nav_channels']}</a>
       <a href="#videos">{t['nav_videos']}</a>
       <a href="#guides">{t['nav_guides']}</a>
       <a href="#items">{t['nav_items']}</a>
+      <a href="#channels">{t['nav_channels']}</a>
       <a href="#contact">{t['nav_contact']}</a>
     </div>
     <div class="lang">
@@ -210,18 +210,7 @@ def page(lang):
 
 <div class="marquee" aria-hidden="true"><div class="track">{marquee}</div></div>
 
-<section id="channels">
-  <div class="wrap">
-    <div class="head rv">
-      <div><div class="eyebrow">CHANNELS</div><h2>{t['ch_title']}</h2></div>
-      <p>{t['ch_desc']}</p>
-    </div>
-    <div class="channels">{channels}
-    </div>
-  </div>
-</section>
-
-{videos_section}<section id="guides">
+{videos_section}{find_section}<section id="guides">
   <div class="wrap">
     <div class="head rv">
       <div><div class="eyebrow">TRAVEL GUIDES</div><h2>{t['guide_title']}</h2></div>
@@ -244,7 +233,18 @@ def page(lang):
   </div>
 </section>
 
-{find_section}<section id="contact" style="padding-bottom:0">
+<section id="channels">
+  <div class="wrap">
+    <div class="head rv">
+      <div><div class="eyebrow">CHANNELS</div><h2>{t['ch_title']}</h2></div>
+      <p>{t['ch_desc']}</p>
+    </div>
+    <div class="channels">{channels}
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-bottom:0">
   <div class="wrap">
     <div class="contact rv">
       <div>
