@@ -498,14 +498,15 @@ const ADMIN_HTML = String.raw`<!doctype html>
 .cap{font-size:13px;color:#475467;white-space:pre-wrap;max-height:4.4em;overflow:hidden;cursor:pointer}
 .cap.open{max-height:none}
 .meta{font-size:12px;color:#98a1b3;margin-bottom:4px}
-.fields{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px;margin:8px 0}
+.fields{display:grid;grid-template-columns:1fr;gap:8px;margin:8px 0}
+.plabel{font-size:12px;color:#667085;width:30px;flex:none;align-self:center}
 .fields input{padding:7px 9px;font-size:13px}
 .row .chips{margin:6px 0}
 .row .chip{font-size:12px;padding:4px 9px}
 .chip.flagon{background:#10131a;border-color:#10131a;color:#fff}
 .add{width:110px !important;padding:4px 9px !important;font-size:12px !important;border-radius:999px !important}
 .acts{display:flex;gap:10px;align-items:center;font-size:13px;margin-top:6px}
-@media(max-width:560px){.fields{grid-template-columns:1fr 1fr}.fields input:first-child{grid-column:1/3}}
+
 </style></head><body><div class="wrap">
 <h1><span>카탈로그 관리</span></h1>
 <p class="sub">초안 태그를 고친 뒤 "확정"을 누르면 공개 페이지에 올라갑니다. 확정 전 영상은 공개되지 않습니다.</p>
@@ -577,6 +578,7 @@ function rowEl(v) {
   var topicBox = el('div', { cls: 'chips' });
   function drawTopics() {
     topicBox.textContent = '';
+    topicBox.appendChild(el('span', { cls: 'plabel', text: '주제' }));
     var all = VOCAB.topics.slice();
     v.topics.forEach(function (t) { if (all.indexOf(t) < 0) all.push(t); });
     all.forEach(function (t) {
@@ -596,6 +598,41 @@ function rowEl(v) {
     } }));
   }
   drawTopics();
+
+  // 나라·도시: 버튼으로 고르기 (자주 쓰는 순서), 없으면 직접 입력
+  var placeBox = el('div');
+  function addInput(ph, onAdd) {
+    return el('input', { cls: 'add', type: 'text', placeholder: ph, onkeydown: function (e) {
+      if (e.key !== 'Enter') return;
+      var t = e.target.value.trim(); if (t) onAdd(t);
+    } });
+  }
+  function drawPlace() {
+    placeBox.textContent = '';
+    var cs = countBy(DATA, function (x) { return x.country; }).map(function (p) { return p[0]; });
+    VOCAB.countries.forEach(function (c) { if (cs.indexOf(c) < 0 && cs.length < 40) cs.push(c); });
+    if (v.country && cs.indexOf(v.country) < 0) cs.unshift(v.country);
+    var crow = el('div', { cls: 'chips' }, [el('span', { cls: 'plabel', text: '나라' })]);
+    cs.slice(0, 24).concat(cs.indexOf(v.country) >= 24 ? [v.country] : []).forEach(function (c) {
+      crow.appendChild(el('button', { cls: 'chip' + (v.country === c ? ' on' : ''), text: c,
+        onclick: function () { if (v.country !== c) { v.country = c; v.city = ''; } drawPlace(); } }));
+    });
+    crow.appendChild(addInput('+ 나라 직접', function (t) { v.country = t; v.city = ''; if (VOCAB.countries.indexOf(t) < 0) VOCAB.countries.push(t); drawPlace(); }));
+    placeBox.appendChild(crow);
+
+    var cities = countBy(DATA.filter(function (x) { return x.country === v.country; }), function (x) { return x.city; })
+      .map(function (p) { return p[0]; });
+    if (v.city && cities.indexOf(v.city) < 0) cities.unshift(v.city);
+    var trow = el('div', { cls: 'chips' }, [el('span', { cls: 'plabel', text: '도시' }),
+      el('button', { cls: 'chip' + (v.city ? '' : ' on'), text: '없음', onclick: function () { v.city = ''; drawPlace(); } })]);
+    cities.slice(0, 20).forEach(function (c) {
+      trow.appendChild(el('button', { cls: 'chip' + (v.city === c ? ' on' : ''), text: c,
+        onclick: function () { v.city = c; drawPlace(); } }));
+    });
+    trow.appendChild(addInput('+ 도시 직접', function (t) { v.city = t; drawPlace(); }));
+    placeBox.appendChild(trow);
+  }
+  drawPlace();
   function field(key, ph, list) {
     return el('input', { type: 'text', value: v[key] || '', placeholder: ph, list: list || null,
       oninput: function (e) { v[key] = e.target.value; } });
@@ -614,8 +651,8 @@ function rowEl(v) {
     el('div', {}, [
       el('div', { cls: 'meta', text: String(v.date).slice(0, 10) + ' · ' + (v.kind || '영상') + (v.confirmed ? ' · 확정됨' : ' · 초안') }),
       cap,
-      el('div', { cls: 'fields' }, [field('title', '제목'), field('country', '나라', 'dlCountry'), field('city', '도시', 'dlCity')]),
-      topicBox, acts
+      el('div', { cls: 'fields' }, [field('title', '제목')]),
+      placeBox, topicBox, acts
     ])
   ]);
 }
