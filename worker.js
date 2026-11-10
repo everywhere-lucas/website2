@@ -543,6 +543,7 @@ function load() {
   return api('all').then(function (j) {
     DATA = j.items.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
     VOCAB = j.vocab;
+    if (VIEW === 'todo' && !DATA.some(function (v) { return !v.confirmed; })) VIEW = 'all';
     document.getElementById('login').hidden = true; document.getElementById('app').hidden = false;
     try { localStorage.setItem('catalogAdminKey', KEY); } catch (e) {}
     fillList('dlCountry', VOCAB.countries); fillList('dlCity', VOCAB.cities);
