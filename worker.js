@@ -439,7 +439,7 @@ function chipRow(label, pairs, cur, pick) {
 function render() {
   writeParams();
   filters.textContent = '';
-  var a = chipRow('나라', countBy(DATA.filter(function (v) { return match(v, 'c'); }), function (v) { return v.country; }), S.c,
+  var a = chipRow('국가', countBy(DATA.filter(function (v) { return match(v, 'c'); }), function (v) { return v.country; }), S.c,
     function (x) { S.c = x; S.city = ''; shown = PAGE; render(); });
   if (a) filters.appendChild(a);
   if (S.c) {
@@ -613,12 +613,12 @@ function rowEl(v) {
     var cs = countBy(DATA, function (x) { return x.country; }).map(function (p) { return p[0]; });
     VOCAB.countries.forEach(function (c) { if (cs.indexOf(c) < 0 && cs.length < 40) cs.push(c); });
     if (v.country && cs.indexOf(v.country) < 0) cs.unshift(v.country);
-    var crow = el('div', { cls: 'chips' }, [el('span', { cls: 'plabel', text: '나라' })]);
+    var crow = el('div', { cls: 'chips' }, [el('span', { cls: 'plabel', text: '국가' })]);
     cs.slice(0, 24).concat(cs.indexOf(v.country) >= 24 ? [v.country] : []).forEach(function (c) {
       crow.appendChild(el('button', { cls: 'chip' + (v.country === c ? ' on' : ''), text: c,
         onclick: function () { if (v.country !== c) { v.country = c; v.city = ''; } drawPlace(); } }));
     });
-    crow.appendChild(addInput('+ 나라 직접', function (t) { v.country = t; v.city = ''; if (VOCAB.countries.indexOf(t) < 0) VOCAB.countries.push(t); drawPlace(); }));
+    crow.appendChild(addInput('+ 국가 직접', function (t) { v.country = t; v.city = ''; if (VOCAB.countries.indexOf(t) < 0) VOCAB.countries.push(t); drawPlace(); }));
     placeBox.appendChild(crow);
 
     var cities = countBy(DATA.filter(function (x) { return x.country === v.country; }), function (x) { return x.city; })
