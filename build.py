@@ -244,7 +244,7 @@ def page(lang):
   </div>
 </section>
 
-<section id="contact" style="padding-bottom:0">
+{find_section}<section id="contact" style="padding-bottom:0">
   <div class="wrap">
     <div class="contact rv">
       <div>
@@ -256,7 +256,7 @@ def page(lang):
   </div>
 </section>
 
-{find_section}<footer>
+<footer>
   <div class="wrap">
     <div class="eyebrow">WHY I TRAVEL</div>
     <div>
