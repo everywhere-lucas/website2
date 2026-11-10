@@ -129,7 +129,7 @@ def page(lang):
     find_section = "" if not CATALOG_ON else f"""<section id="videos">
   <div class="wrap">
     <div class="head rv">
-      <div><div class="eyebrow">FIND VIDEOS</div><h2>{t.get('find_title', '영상 찾기')}</h2></div>
+      <div><div class="eyebrow">BROWSE BY PLACE</div><h2>{t.get('find_title', '영상 찾기')}</h2></div>
       <p>{t.get('find_desc', '')}</p>
     </div>
     <div id="lucas-catalog" data-placeholder="{e(t.get('find_placeholder', ''))}"></div>
