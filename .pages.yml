@@ -211,6 +211,8 @@ content:
               - { name: ct_title, type: string }
               - { name: ct_desc, type: string }
               - { name: ct_btn, type: string }
+              - { name: ct_copy, type: string }
+              - { name: ct_copied, type: string }
               - { name: promise, type: string }
           - name: en
             label: 영문
@@ -246,4 +248,6 @@ content:
               - { name: ct_title, type: string }
               - { name: ct_desc, type: string }
               - { name: ct_btn, type: string }
+              - { name: ct_copy, type: string }
+              - { name: ct_copied, type: string }
               - { name: promise, type: string }

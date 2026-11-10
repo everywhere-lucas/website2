@@ -191,3 +191,9 @@
 }
 html,body{overflow-x:clip}
 
+
+/* 문의: 메일 버튼 + 주소 복사 */
+.ct-actions{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.ct-copy{font:inherit;font-size:13px;background:none;border:0;color:#fff;opacity:.75;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:2px 0}
+.ct-copy:hover{opacity:1}
+@media(max-width:760px){.ct-actions{align-items:flex-start}}

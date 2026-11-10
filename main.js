@@ -38,3 +38,29 @@
   }, { threshold: 0.12 });
   els.forEach(function (el) { io.observe(el); });
 })();
+
+// 메일 보내기: PC에서는 메일 앱이 설정 안 된 경우가 많아 Gmail 쓰기 창을 열고, 휴대폰은 기본 메일 앱(mailto)을 써요
+(function () {
+  var btn = document.getElementById('mailBtn'), copy = document.getElementById('mailCopy');
+  var mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (btn && !mobile) {
+    btn.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      var to = btn.getAttribute('data-email');
+      window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to), '_blank', 'noopener');
+    });
+  }
+  if (copy) {
+    copy.addEventListener('click', function () {
+      var to = copy.getAttribute('data-email'), label = copy.textContent;
+      function done() { copy.textContent = copy.getAttribute('data-done'); setTimeout(function () { copy.textContent = label; }, 1800); }
+      function fallback() {
+        var t = document.createElement('textarea'); t.value = to; t.style.position = 'fixed'; t.style.opacity = '0';
+        document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(t);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(to).then(done, fallback); else fallback();
+    });
+  }
+})();

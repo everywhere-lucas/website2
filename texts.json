@@ -42,6 +42,8 @@
       "ct_title": "함께 <em> 여행 </em>을 만들어요",
       "ct_desc": "광고 · 협찬 · 콘텐츠 협업 문의는 메일로 연락주세요.",
       "ct_btn": "메일 보내기 ✉",
+      "ct_copy": "주소 복사",
+      "ct_copied": "복사했어요 ✓",
       "promise": "처음 가는 여행지라도 걱정 마세요. 루카스가 먼저 다녀와서, 헤매지 않게 길을 알려드릴게요."
     },
     "en": {
@@ -75,6 +77,8 @@
       "ct_title": "Let's create <em>together</em>",
       "ct_desc": "For ads, sponsorships and collaborations, drop me an email.",
       "ct_btn": "Send email ✉",
+      "ct_copy": "Copy address",
+      "ct_copied": "Copied ✓",
       "promise": "Going somewhere for the first time? Don't worry. I've been there first, so I'll show you the way."
     }
   }

@@ -251,7 +251,10 @@ def page(lang):
         <h2>{t['ct_title']}</h2>
         <p>{t['ct_desc']}</p>
       </div>
-      <a class="btn neon" href="mailto:{e(C['email'])}">{t['ct_btn']}</a>
+      <div class="ct-actions">
+        <a class="btn neon" id="mailBtn" href="mailto:{e(C['email'].strip())}" data-email="{e(C['email'].strip())}">{t['ct_btn']}</a>
+        <button type="button" class="ct-copy" id="mailCopy" data-email="{e(C['email'].strip())}" data-done="{e(t.get('ct_copied', '복사했어요 ✓'))}">{e(C['email'].strip())} · {e(t.get('ct_copy', '주소 복사'))}</button>
+      </div>
     </div>
   </div>
 </section>
