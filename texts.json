@@ -1,4 +1,5 @@
 {
+  "catalog_url": "",
   "seo": {
     "ko": {
       "title": "루카스 | 여행 크리에이터",
@@ -25,6 +26,9 @@
       "ch_desc": "같은 여행, 채널마다 다른 방식으로 담고 있어요.",
       "vid_title": "국가별 인기 여행 영상",
       "vid_desc": "조회수 가장 많이 나온 숏폼만 골랐어요. 클릭하면 인스타로 이동해요.",
+      "find_title": "영상 찾기",
+      "find_desc": "나라·도시·주제로 고르거나 검색해 보세요. 클릭하면 인스타로 이동해요.",
+      "find_placeholder": "예: 로마, 공항 꿀팁, 젤라또",
       "guide_title": "여행 가이드",
       "guide_desc": "직접 다녀온 곳을 구글 맵에 정리했어요",
       "item_title": "루카스의 여행 가방 속",
@@ -55,6 +59,9 @@
       "ch_desc": "Same trips, told differently on each channel.",
       "vid_title": "Most-watched travel shorts",
       "vid_desc": "My most-viewed shorts by country. Tap to watch.",
+      "find_title": "Find a video",
+      "find_desc": "Browse by country, city or topic, or search. Tap to open on Instagram.",
+      "find_placeholder": "e.g. 로마, 공항, 젤라또",
       "guide_title": "Travel guides",
       "guide_desc": "In-depth travel posts from my blog.",
       "item_title": "What's in my travel bag",
