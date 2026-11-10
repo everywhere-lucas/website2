@@ -156,7 +156,7 @@ content:
     type: file
     path: texts.json
     fields:
-      - { name: catalog_url, label: "영상 찾기(카탈로그) 주소 — 비우면 예전 인기 영상 섹션이 나와요", type: string }
+      - { name: catalog_url, label: "영상 찾기 켜기 — / 한 글자를 넣으면 맨 아래에 검색이 나오고, 비우면 예전 인기 영상 섹션이 나와요", type: string }
       - name: seo
         label: 검색 설정
         type: object

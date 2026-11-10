@@ -1,9 +1,21 @@
 // Cloudflare 설정 파일 — build.py가 만든 dist 폴더(완성본)를 사이트로 올려요.
 // "name"은 Cloudflare에 만든 프로젝트 이름과 같아야 해요.
+// worker.js는 '영상 찾기'(카탈로그)용 코드예요: /admin, /embed.js, /api/…, /thumb/… 주소만 처리하고
+// 나머지는 전부 dist 폴더의 파일이 그대로 나가요.
 {
   "name": "website2",
+  "main": "worker.js",
   "compatibility_date": "2026-10-01",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  // 영상 목록·태그 저장소. id를 안 적으면 첫 배포 때 Cloudflare가 자동으로 만들어 연결해요.
+  "kv_namespaces": [
+    { "binding": "CATALOG" }
+  ],
+  // 매일 한국시간 오전 6시 17분에 새 게시물을 가져와 태그 초안을 만들어요.
+  "triggers": {
+    "crons": ["17 21 * * *"]
   }
 }

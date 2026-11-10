@@ -12,8 +12,10 @@ C.update(json.loads((ROOT / "texts.json").read_text(encoding="utf-8")))
 for _k in ["channels", "videos", "guides", "items"]:
     C[_k] = [x for x in C.get(_k, []) if not x.get("hide")]   # '숨기기' 체크한 항목은 사이트에서 빼기
 SITE = C["site_url"].rstrip("/") + "/"
-# 영상 카탈로그(검색) Worker 주소. 비어 있으면 예전 '인기 영상' 섹션을 그대로 보여줘요.
-CATALOG = (C.get("catalog_url") or "").strip().rstrip("/")
+# 영상 찾기(카탈로그) 켜기: "/" 를 넣으면 켜지고, 비어 있으면 예전 '인기 영상' 섹션을 그대로 보여줘요.
+_cat = (C.get("catalog_url") or "").strip()
+CATALOG_ON = bool(_cat)            # "/" 를 넣으면 이 사이트 안의 카탈로그를 써요
+CATALOG = _cat.rstrip("/")
 PATHS = {"ko": "", "en": "en/"}
 # content.json에 첫 화면 사진(destinations)이 없을 때 쓰는 기본값
 C.setdefault("destinations", [
@@ -110,7 +112,7 @@ def page(lang):
       </a>""" for it in C["items"])
 
     # 카탈로그 주소가 있으면: 예전 '인기 영상' 섹션은 빼고, 맨 아래에 검색 섹션을 넣어요.
-    videos_section = "" if CATALOG else f"""<section id="videos">
+    videos_section = "" if CATALOG_ON else f"""<section id="videos">
   <div class="wrap">
     <div class="head rv">
       <div><div class="eyebrow">BEST SHORTS</div><h2>{t['vid_title']}</h2></div>
@@ -124,7 +126,7 @@ def page(lang):
 </section>
 
 """
-    find_section = "" if not CATALOG else f"""<section id="videos">
+    find_section = "" if not CATALOG_ON else f"""<section id="videos">
   <div class="wrap">
     <div class="head rv">
       <div><div class="eyebrow">FIND VIDEOS</div><h2>{t.get('find_title', '영상 찾기')}</h2></div>
