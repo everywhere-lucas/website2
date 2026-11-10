@@ -11,7 +11,28 @@
 //   /embed.js  홈페이지에 검색 화면을 끼워 넣는 스크립트
 //   /admin   태그 확정용 관리자 화면
 
-const IG = 'https://graph.instagram.com';
+const IG = 'https://graph.instagram.com/v23.0';
+const FB = 'https://graph.facebook.com/v23.0';
+
+// 토큰 정리: 앞뒤 공백·따옴표·"Bearer " 를 떼어낸다 (붙여 넣다 섞여 들어가는 경우가 많음)
+function cleanToken(t) {
+  return String(t || '').replace(/\s+/g, '').replace(/^Bearer/i, '').replace(/^["']+|["']+$/g, '');
+}
+
+// 토큰 종류에 맞춰 연결: IG... = 인스타 로그인 토큰, EAA... = 페이스북 토큰(연결된 인스타 비즈니스 계정 사용)
+async function connect(env) {
+  const token = cleanToken(env.IG_TOKEN);
+  if (!token) throw new Error('IG_TOKEN 시크릿이 등록되지 않았습니다.');
+  const q = (path) => path + (path.indexOf('?') >= 0 ? '&' : '?') + 'access_token=' + encodeURIComponent(token);
+  if (!token.startsWith('EAA')) return { base: IG, user: 'me', q };
+  const c = { base: FB, user: null, q };
+  const pages = await igGet(FB + q('/me/accounts?fields=name,instagram_business_account{id,username}&limit=100'));
+  const linked = (pages.data || []).map((p) => p.instagram_business_account).filter(Boolean);
+  if (!linked.length) throw new Error('페이스북 토큰에 연결된 인스타 비즈니스 계정을 찾지 못했습니다.');
+  const want = String(env.IG_USERNAME || 'everywhere.lucas').toLowerCase();
+  c.user = (linked.find((a) => String(a.username || '').toLowerCase() === want) || linked[0]).id;
+  return c;
+}
 const FIELDS = 'id,caption,media_type,media_product_type,permalink,thumbnail_url,media_url,timestamp';
 const VIDEOS_ONLY = false; // true로 바꾸면 릴스(영상)만 가져옴
 
@@ -139,13 +160,20 @@ async function igGet(u) {
   const r = await fetch(u);
   let j;
   try { j = await r.json(); } catch (e) { throw new Error('인스타 API 응답을 읽지 못했습니다 (HTTP ' + r.status + ')'); }
-  if (j && j.error) throw new Error('인스타 API 오류: ' + j.error.message);
+  if (j && j.error) {
+    const m = String(j.error.message || '');
+    if (/parse access token|Invalid OAuth/i.test(m)) {
+      throw new Error('토큰을 읽을 수 없습니다. Cloudflare의 IG_TOKEN 값이 잘렸거나 다른 글자가 섞였는지 확인해 주세요. (인스타 응답: ' + m + ')');
+    }
+    if (/expired|Session has expired/i.test(m)) throw new Error('토큰이 만료됐습니다. Meta 개발자 페이지에서 새로 발급해 IG_TOKEN에 넣어 주세요.');
+    throw new Error('인스타 API 오류: ' + m);
+  }
   return j;
 }
 
 async function sync(env) {
-  if (!env.IG_TOKEN) throw new Error('IG_TOKEN 시크릿이 등록되지 않았습니다.');
-  let next = IG + '/me/media?fields=' + FIELDS + '&limit=50&access_token=' + encodeURIComponent(env.IG_TOKEN);
+  const c = await connect(env);
+  let next = c.base + c.q('/' + c.user + '/media?fields=' + FIELDS + '&limit=50');
   const items = [];
   for (let page = 0; next && page < 40; page++) {
     const j = await igGet(next);
@@ -207,7 +235,8 @@ async function thumb(id, req, env, ctx) {
   let r = item.thumb ? await fetch(item.thumb) : null;
   if (!r || !r.ok) {
     // 인스타 썸네일 주소는 며칠 뒤 만료된다 → 새 주소를 받아 온다
-    const j = await igGet(IG + '/' + id + '?fields=thumbnail_url,media_url,media_type&access_token=' + encodeURIComponent(env.IG_TOKEN || ''));
+    const c = await connect(env);
+    const j = await igGet(c.base + c.q('/' + id + '?fields=thumbnail_url,media_url,media_type'));
     const fresh = j.thumbnail_url || (j.media_type !== 'VIDEO' ? j.media_url : '');
     if (!fresh) return new Response('no thumbnail', { status: 404 });
     r = await fetch(fresh);
