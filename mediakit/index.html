@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>everywhere.lucas Media Kit</title>
-<meta name="description" content="여행 크리에이터 루카스(@everywhere.lucas) 미디어킷 — 채널 지표, 대표 콘텐츠, 협업 형태. Media kit in Korean, English, Japanese and Italian.">
+<meta name="description" content="여행 크리에이터 루카스(@everywhere.lucas) 미디어킷 — 계정 소개, 다루는 주제, 협업 형태. Media kit in Korean, English, Japanese and Italian.">
 <link rel="canonical" href="https://everywherelucas.com/mediakit/">
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/images/favicon-48.png" sizes="48x48" type="image/png">
@@ -19,156 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<style>
-/* Layout idea: the PDF's blue cover becomes the hero, then white sections in one 1080px column,
-   closed by a blue contact block. One visual world (brand blue / neon lime / white), single theme. */
-:root{
-  color-scheme: light;
-  --blue:#1546ff;
-  --lime:#d9ff3f;
-  --navy:#0e1430;
-  --ink:#121833;
-  --muted:#5b6385;
-  --tile:#f3f6ff;
-  --line:#e1e5f4;
-  --paper:#ffffff;
-  --font: "Pretendard","Noto Sans JP",system-ui,-apple-system,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-  --r:22px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
-html[lang="ja"] body{word-break:normal}
-a{color:inherit}
-img{max-width:100%;display:block}
-h1,h2,h3,p{margin:0}
-h1,h2,h3{text-wrap:balance;line-height:1.2;letter-spacing:-0.02em}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
-.light :focus-visible{outline-color:var(--blue)}
-
-/* header */
-.top{position:sticky;top:0;z-index:10;background:var(--blue);color:#fff}
-.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;padding-top:14px;padding-bottom:14px}
-.logo{font-weight:800;font-size:18px;letter-spacing:-0.02em;text-decoration:none;white-space:nowrap}
-.logo b{background:var(--lime);color:var(--navy);border-radius:7px;padding:1px 7px;margin-left:2px;font-weight:800}
-.langs{display:flex;gap:4px;background:rgba(255,255,255,.14);border-radius:999px;padding:4px}
-.langs button{font:inherit;font-size:13px;font-weight:600;color:#fff;background:none;border:0;border-radius:999px;padding:6px 12px;cursor:pointer;white-space:nowrap}
-.langs button:hover{background:rgba(255,255,255,.16)}
-.langs button[aria-pressed="true"]{background:var(--lime);color:var(--navy)}
-
-/* hero */
-.hero{background:var(--blue);color:#fff;padding:36px 0 56px}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-.kit{font-size:13px;font-weight:700;letter-spacing:.14em;opacity:.8;margin-bottom:22px}
-.kicker{color:var(--lime);font-weight:800;font-size:clamp(20px,2.6vw,28px);margin-bottom:6px}
-.name-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin-bottom:22px}
-.hero h1{font-size:clamp(56px,9vw,96px);font-weight:900;line-height:1.05}
-.pill{display:inline-flex;align-items:center;gap:6px;background:var(--lime);color:var(--navy);font-weight:800;font-size:15px;border-radius:999px;padding:10px 18px;text-decoration:none;white-space:nowrap}
-.pill:hover{filter:brightness(.95)}
-.pill.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.75)}
-.pill.ghost:hover{background:rgba(255,255,255,.12);filter:none}
-.lead{font-size:17px;max-width:34em;margin-bottom:26px}
-.meta{display:grid;gap:10px;margin:0}
-.meta div{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
-.meta dt{background:#fff;color:var(--blue);font-size:13px;font-weight:800;border-radius:999px;padding:4px 12px}
-.meta dd{margin:0;font-size:17px}
-.meta a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}
-.photo{border-radius:28px;overflow:hidden;aspect-ratio:5/4;background:var(--navy)}
-.photo img{width:100%;height:100%;object-fit:cover;object-position:70% 50%}
-.hstats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
-.hstat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);border-radius:var(--r);padding:22px 24px}
-.num{font-weight:900;font-size:clamp(30px,4.2vw,44px);line-height:1.1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums}
-.num{white-space:nowrap;overflow-wrap:normal;word-break:keep-all}
-.lab{font-size:14px;margin-top:6px}
-.hstat .lab{opacity:.92}
-
-/* ticker */
-.ticker{background:var(--lime);color:var(--navy);overflow:hidden;font-weight:900;font-size:15px;letter-spacing:.08em;padding:14px 0}
-.ticker-track{display:flex;width:max-content;animation:slide 32s linear infinite}
-.ticker-track span{padding-right:56px;white-space:nowrap}
-@keyframes slide{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.ticker-track{animation:none}html{scroll-behavior:auto}}
-
-/* sections */
-section.block{padding:72px 0 0}
-.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.28em;margin-bottom:8px}
-h2{font-size:clamp(30px,4.4vw,40px);font-weight:800;margin-bottom:28px}
-h3.sub{font-size:22px;font-weight:800;margin:56px 0 20px}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.tile{background:var(--tile);border-radius:var(--r);padding:26px}
-.tile .num{color:var(--blue)}
-.tile .lab{color:var(--muted)}
-.tile.dark{background:var(--navy)}
-.tile.dark .num{color:var(--lime)}
-.tile.dark .lab{color:#fff}
-.note{color:var(--muted);font-size:13.5px;margin-top:14px;max-width:70ch}
-.reasons{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.reason{border:1px solid var(--line);border-radius:var(--r);padding:26px}
-.tag{display:inline-block;background:var(--lime);color:var(--navy);font-weight:900;font-size:13px;border-radius:999px;padding:3px 12px;margin-bottom:14px}
-.reason h4{margin:0 0 8px;font-size:19px;font-weight:800;letter-spacing:-0.02em;line-height:1.3}
-.reason p{color:var(--muted);font-size:15.5px}
-
-/* featured */
-.reels{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.reel{display:grid;grid-template-columns:76px 1fr;gap:8px;padding:26px 0;border-bottom:1px solid var(--line)}
-.rank{color:var(--blue);font-weight:900;font-size:36px;line-height:1.1;letter-spacing:-0.02em}
-.reel h4{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;line-height:1.35}
-.reel h4 time{font-size:13.5px;font-weight:500;color:var(--muted);margin-left:8px;letter-spacing:0;white-space:nowrap}
-.orig{color:var(--muted);font-size:13.5px;margin-top:2px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
-.chip{background:var(--tile);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
-.chip b{color:var(--ink);font-weight:800;margin-left:4px}
-.chip.main{background:var(--blue);color:#fff}
-.chip.main b{color:#fff}
-.reel p.why{color:var(--muted);font-size:15.5px;margin-bottom:12px;max-width:65ch}
-.pill.sm{font-size:14px;padding:8px 16px}
-
-/* collab */
-.formats{margin:0;border-top:1px solid var(--line)}
-.formats div{display:grid;grid-template-columns:220px 1fr;gap:6px 24px;padding:20px 0;border-bottom:1px solid var(--line)}
-.formats dt{font-weight:800}
-.formats dd{margin:0;color:var(--muted)}
-.ads{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.ad{display:block;background:var(--tile);border-radius:var(--r);padding:24px 26px;text-decoration:none}
-.ad:hover{background:#e9eeff}
-.ad strong{display:block;font-size:18px;font-weight:800}
-.ad span{color:var(--muted);font-size:14px}
-
-/* contact */
-.contact{background:var(--blue);color:#fff;border-radius:28px;padding:48px;margin-top:72px}
-.contact .eyebrow{color:var(--lime)}
-.mail{font-size:clamp(22px,4.2vw,36px);font-weight:900;letter-spacing:-0.02em;text-decoration:none;display:inline-block;margin-bottom:22px;overflow-wrap:anywhere}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
-button.pill{font-family:inherit;border:0;cursor:pointer}
-footer{color:var(--muted);font-size:13.5px;padding:28px 0 40px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
-footer .in{border-top:1px solid var(--line);padding-top:20px;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
-
-@media (max-width:820px){
-  .hero-grid{grid-template-columns:1fr;gap:28px}
-  .photo{order:-1;aspect-ratio:4/3}
-  .tiles{grid-template-columns:repeat(2,1fr)}
-  .reasons,.ads{grid-template-columns:1fr}
-  .formats div{grid-template-columns:1fr}
-}
-@media (max-width:560px){
-  .wrap{padding:0 18px}
-  .hero{padding:20px 0 40px}
-  .hstats{grid-template-columns:1fr;gap:10px;margin-top:32px}
-  .hstat{display:flex;align-items:baseline;gap:14px;padding:16px 20px}
-  .hstat .lab{margin:0}
-  .tiles{grid-template-columns:1fr;gap:10px}
-  .tile{padding:16px 20px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
-  .tile .lab{margin:0}
-  .hstat{flex-wrap:wrap;gap:4px 14px}
-  .reel{grid-template-columns:1fr}
-  .rank{font-size:28px}
-  .contact{padding:32px 24px;border-radius:22px}
-  section.block{padding-top:56px}
-  .langs button{padding:6px 10px}
-}
-</style>
+<link rel="stylesheet" href="kit.css">
 </head>
 <body>
 
@@ -195,18 +46,18 @@ footer .in{border-top:1px solid var(--line);padding-top:20px;width:100%;display:
           <h1 data-t="name">루카스</h1>
           <a class="pill" href="https://www.instagram.com/everywhere.lucas/" target="_blank" rel="noopener">@everywhere.lucas ↗</a>
         </div>
-        <p class="lead" data-t="lead">30개국 100개 도시를 다녀온 직장인 루카스. 출국 준비부터 현지 코스까지 직접 확인한 정보만 숏폼으로 전합니다.</p>
+        <p class="lead" data-t="lead"></p>
         <dl class="meta">
-          <div><dt data-t="mSite">홈페이지</dt><dd><a href="https://everywherelucas.com/" target="_blank" rel="noopener">everywherelucas.com</a></dd></div>
+          <div><dt data-t="mSite">홈페이지</dt><dd><a href="https://everywherelucas.com/" data-home>everywherelucas.com</a></dd></div>
           <div><dt data-t="mMail">협업 문의</dt><dd><a href="mailto:everywherelucas365@gmail.com">everywherelucas365@gmail.com</a></dd></div>
         </dl>
       </div>
       <div class="photo"><img src="hero.jpg" alt="" data-alt="photoAlt" width="1800" height="1423"></div>
     </div>
     <div class="hstats">
-      <div class="hstat"><div class="num">6,136</div><div class="lab" data-t="h1l">인스타그램 팔로워</div></div>
-      <div class="hstat"><div class="num" data-t="h2n">595만</div><div class="lab" data-t="h2l">최근 2개월 릴스 조회</div></div>
-      <div class="hstat"><div class="num" data-t="h3n">508만</div><div class="lab" data-t="h3l">최고 조회 릴스 1편</div></div>
+      <div class="hstat"><div class="num" data-t="h1n">6,136</div><div class="lab" data-t="h1l"></div></div>
+      <div class="hstat"><div class="num" data-t="h2n">595만</div><div class="lab" data-t="h2l"></div></div>
+      <div class="hstat"><div class="num" data-t="h3n">508만</div><div class="lab" data-t="h3l"></div></div>
     </div>
   </div>
 </div>
@@ -223,53 +74,61 @@ footer .in{border-top:1px solid var(--line);padding-top:20px;width:100%;display:
 <div class="light">
 <section class="block">
   <div class="wrap">
-    <p class="eyebrow">CHANNEL</p>
-    <h2 data-t="chTitle">채널 지표</h2>
-    <div class="tiles">
-      <div class="tile dark"><div class="num" data-t="n1">6,136</div><div class="lab" data-t="c1">팔로워</div></div>
-      <div class="tile"><div class="num" data-t="n2">5,952,085</div><div class="lab" data-t="c2">최근 2개월 릴스 총 조회</div></div>
-      <div class="tile"><div class="num" data-t="n3">15편</div><div class="lab" data-t="c3">1만 조회 이상 릴스 (26편 중)</div></div>
-      <div class="tile"><div class="num" data-t="n4">5,076,556</div><div class="lab" data-t="c4">최고 조회 릴스 (10/7)</div></div>
-      <div class="tile"><div class="num" data-t="n5">39만</div><div class="lab" data-t="c5">11월 1~13일 조회 (5편)</div></div>
-      <div class="tile"><div class="num">98</div><div class="lab" data-t="c6">누적 게시물</div></div>
+    <p class="eyebrow">ABOUT</p>
+    <h2 data-t="abTitle"></h2>
+    <div class="about">
+      <div><p data-t="ab1"></p><p data-t="ab2"></p></div>
+      <div class="topics">
+        <div class="topic"><strong data-t="t1t"></strong><span data-t="t1d"></span></div>
+        <div class="topic"><strong data-t="t2t"></strong><span data-t="t2d"></span></div>
+        <div class="topic"><strong data-t="t3t"></strong><span data-t="t3d"></span></div>
+        <div class="topic"><strong data-t="t4t"></strong><span data-t="t4d"></span></div>
+      </div>
     </div>
-    <p class="note" data-t="chNote">2026년 11월 13일 기준. 릴스 수치는 9월 10일~11월 11일에 올린 26편의 인스타그램 인사이트 합계이며, 총 조회 중 508만은 10월 7일 릴스 1편입니다.</p>
 
-    <h3 class="sub" data-t="whyTitle">브랜드와 맞는 이유</h3>
+    <h3 class="sub" data-t="chTitle"></h3>
+    <div class="chans">
+      <a class="chan" href="https://www.instagram.com/everywhere.lucas/" target="_blank" rel="noopener"><strong>Instagram ↗</strong><span data-t="ch1"></span></a>
+      <a class="chan" href="https://blog.naver.com/lucas_travel" target="_blank" rel="noopener"><strong><span data-t="ch2t" style="color:inherit;font-size:inherit"></span> ↗</strong><span data-t="ch2"></span></a>
+      <a class="chan" href="https://everywherelucas.com/" data-home><strong>everywherelucas.com</strong><span data-t="ch3"></span></a>
+    </div>
+
+    <h3 class="sub" data-t="whyTitle"></h3>
     <div class="reasons">
-      <div class="reason"><span class="tag">01</span><h4 data-t="w1t">출국 직전의 사람들이 봅니다</h4><p data-t="w1d">공항·출국 준비가 가장 많이 다루는 주제이고, 새 팔로우도 이 주제에서 가장 잘 늡니다. 여행 준비물, 로밍·eSIM, 캐리어, 항공·숙소처럼 떠나기 전에 고르는 상품과 맞습니다.</p></div>
-      <div class="reason"><span class="tag">02</span><h4 data-t="w2t">저장하고 공유하는 정보형 콘텐츠</h4><p data-t="w2d">인천공항 줄 줄이는 법은 저장 2,404 · 공유 3,115, 대만 먹거리는 저장 2,868 · 공유 3,132을 기록했습니다.</p></div>
-      <div class="reason"><span class="tag">03</span><h4 data-t="w3t">팔로워보다 멀리 도달합니다</h4><p data-t="w3d">팔로워 6천 명대 계정에서 최근 2개월간 올린 릴스 26편 중 15편이 1만 조회를 넘었습니다.</p></div>
-      <div class="reason"><span class="tag">04</span><h4 data-t="w4t">직접 다녀온 사람의 경험</h4><p data-t="w4d">30개국 100개 도시를 다닌 30대 직장인의 시선으로, 휴가를 쪼개 여행하는 직장인에게 닿습니다.</p></div>
+      <div class="reason"><span class="tag">01</span><h4 data-t="w1t"></h4><p data-t="w1d"></p></div>
+      <div class="reason"><span class="tag">02</span><h4 data-t="w2t"></h4><p data-t="w2d"></p></div>
+      <div class="reason"><span class="tag">03</span><h4 data-t="w3t"></h4><p data-t="w3d"></p></div>
+      <div class="reason"><span class="tag">04</span><h4 data-t="w4t"></h4><p data-t="w4d"></p></div>
     </div>
-  </div>
-</section>
 
-<section class="block">
-  <div class="wrap">
-    <p class="eyebrow">FEATURED</p>
-    <h2 data-t="ftTitle">대표 콘텐츠</h2>
-    <ol class="reels" id="reels"></ol>
+    <div class="banner">
+      <div>
+        <p class="eyebrow">RESULTS</p>
+        <h3 data-t="bnTitle"></h3>
+        <p data-t="bnDesc"></p>
+      </div>
+      <a class="pill" href="results/" data-go="results/" data-t="bnBtn"></a>
+    </div>
   </div>
 </section>
 
 <section class="block">
   <div class="wrap">
     <p class="eyebrow">COLLABORATION</p>
-    <h2 data-t="coTitle">협업 형태</h2>
+    <h2 data-t="coTitle"></h2>
     <dl class="formats">
-      <div><dt data-t="f1t">릴스</dt><dd data-t="f1d">제품·서비스를 실제 여행 상황에 녹인 숏폼 1편</dd></div>
-      <div><dt data-t="f2t">캐러셀</dt><dd data-t="f2d">저장해 두고 보는 정보형 카드뉴스</dd></div>
-      <div><dt data-t="f3t">스토리</dt><dd data-t="f3d">링크를 포함한 스토리</dd></div>
-      <div><dt data-t="f4t">블로그 리뷰</dt><dd data-t="f4d">네이버 블로그 상세 후기 (릴스와 묶음 가능)</dd></div>
-      <div><dt data-t="f5t">숙소·현지 체험</dt><dd data-t="f5d">해외 현지에서 촬영하는 방문 콘텐츠</dd></div>
+      <div><dt data-t="f1t"></dt><dd data-t="f1d"></dd></div>
+      <div><dt data-t="f2t"></dt><dd data-t="f2d"></dd></div>
+      <div><dt data-t="f3t"></dt><dd data-t="f3d"></dd></div>
+      <div><dt data-t="f4t"></dt><dd data-t="f4d"></dd></div>
+      <div><dt data-t="f5t"></dt><dd data-t="f5d"></dd></div>
     </dl>
-    <p class="note" data-t="coNote">단가, 2차 활용, 업로드 일정은 문의 주시면 안내드립니다.</p>
+    <p class="note" data-t="coNote"></p>
 
-    <h3 class="sub" data-t="adTitle">진행한 광고</h3>
+    <h3 class="sub" data-t="adTitle"></h3>
     <div class="ads">
-      <a class="ad" href="https://www.instagram.com/reel/DfUYZnPI3wm/" target="_blank" rel="noopener"><strong><span data-t="a1t" style="color:inherit;font-size:inherit">해외 로밍</span> ↗</strong><span data-t="a1d">릴스 · 2026년 11월</span></a>
-      <a class="ad" href="https://www.instagram.com/reel/DeK7ZhwBp5r/" target="_blank" rel="noopener"><strong><span data-t="a2t" style="color:inherit;font-size:inherit">여행 캐리어</span> ↗</strong><span data-t="a2d">릴스 · 2026년 10월</span></a>
+      <a class="ad" href="https://www.instagram.com/reel/DfUYZnPI3wm/" target="_blank" rel="noopener"><strong><span data-t="a1t" style="color:inherit;font-size:inherit"></span> ↗</strong><span data-t="a1d"></span></a>
+      <a class="ad" href="https://www.instagram.com/reel/DeK7ZhwBp5r/" target="_blank" rel="noopener"><strong><span data-t="a2t" style="color:inherit;font-size:inherit"></span> ↗</strong><span data-t="a2d"></span></a>
     </div>
 
     <div class="contact" id="contact">
@@ -278,7 +137,7 @@ footer .in{border-top:1px solid var(--line);padding-top:20px;width:100%;display:
       <div class="btns">
         <button type="button" class="pill" id="copy" data-t="copy">이메일 복사</button>
         <a class="pill ghost" href="https://www.instagram.com/everywhere.lucas/" target="_blank" rel="noopener">Instagram @everywhere.lucas ↗</a>
-        <a class="pill ghost" href="https://everywherelucas.com/" target="_blank" rel="noopener">everywherelucas.com ↗</a>
+        <a class="pill ghost" href="https://everywherelucas.com/" data-home>everywherelucas.com</a>
       </div>
     </div>
   </div>
@@ -291,29 +150,26 @@ footer .in{border-top:1px solid var(--line);padding-top:20px;width:100%;display:
 </footer>
 
 <script>
-const T = {
+window.KIT_T = {
 ko:{
   kicker:"여행 크리에이터", name:"루카스",
   lead:"30개국 100개 도시를 다녀온 직장인 루카스. 출국 준비부터 현지 코스까지 직접 확인한 정보만 숏폼으로 전합니다.",
   mSite:"홈페이지", mMail:"협업 문의", photoAlt:"파리의 레스토랑 창가에 앉아 있는 루카스",
-  h1l:"인스타그램 팔로워", h2n:"595만", h2l:"최근 2개월 릴스 조회", h3n:"508만", h3l:"최고 조회 릴스 1편",
-  chTitle:"채널 지표",
-  n1:"6,136", c1:"팔로워", n2:"5,952,085", c2:"최근 2개월 릴스 총 조회", n3:"15편", c3:"1만 조회 이상 릴스 (26편 중)",
-  n4:"5,076,556", c4:"최고 조회 릴스 (10/7)", n5:"39만", c5:"11월 1~13일 조회 (5편)", c6:"누적 게시물",
-  chNote:"2026년 11월 13일 기준. 릴스 수치는 9월 10일~11월 11일에 올린 26편의 인스타그램 인사이트 합계이며, 총 조회 중 508만은 10월 7일 릴스 1편입니다.",
+  h1n:"6,136", h1l:"인스타그램 팔로워", h2n:"595만", h2l:"최근 2개월 릴스 조회", h3n:"508만", h3l:"최고 조회 릴스 1편",
+  abTitle:"처음 가는 사람도 따라 하는 실전 여행",
+  ab1:"루카스는 휴가를 쪼개 여행하는 30대 직장인입니다. 30개국 100개 도시를 다니며 직접 겪고 확인한 것만 골라, 출국 준비부터 현지 코스까지 바로 써먹을 수 있는 정보로 전합니다.",
+  ab2:"멋진 풍경보다 그래서 어떻게 하면 되는지를 알려주는 계정입니다. 공항에서 줄을 줄이는 방법, 현지에서 실패 없는 먹거리, 바뀐 규정처럼 여행 직전에 필요한 내용을 숏폼과 캐러셀로 올립니다.",
+  t1t:"공항·출국 준비", t1d:"줄 줄이는 법, 터미널 이용 팁, 기내 반입 규정",
+  t2t:"현지 먹거리·코스", t2d:"직접 가 본 맛집과 동선",
+  t3t:"이동·예약", t3d:"로밍·eSIM, 교통, 할인 정보",
+  t4t:"여행 소식", t4d:"바뀐 규정과 시기별로 알아야 할 것",
+  chTitle:"운영 채널", ch1:"@everywhere.lucas · 숏폼과 캐러셀", ch2t:"네이버 블로그", ch2:"사진과 글로 남기는 상세 후기", ch3:"여행 가이드, 맛집 지도, 추천템",
   whyTitle:"브랜드와 맞는 이유",
   w1t:"출국 직전의 사람들이 봅니다", w1d:"공항·출국 준비가 가장 많이 다루는 주제이고, 새 팔로우도 이 주제에서 가장 잘 늡니다. 여행 준비물, 로밍·eSIM, 캐리어, 항공·숙소처럼 떠나기 전에 고르는 상품과 맞습니다.",
-  w2t:"저장하고 공유하는 정보형 콘텐츠", w2d:"인천공항 줄 줄이는 법은 저장 2,404 · 공유 3,115, 대만 먹거리는 저장 2,868 · 공유 3,132을 기록했습니다.",
-  w3t:"팔로워보다 멀리 도달합니다", w3d:"팔로워 6천 명대 계정에서 최근 2개월간 올린 릴스 26편 중 15편이 1만 조회를 넘었습니다.",
+  w2t:"저장하고 공유하는 정보형 콘텐츠", w2d:"출국 직전에 바로 써먹는 정보라 같이 떠나는 사람에게 공유하고, 여행 계획 단계에서 저장해 둡니다.",
+  w3t:"팔로워보다 멀리 도달합니다", w3d:"최근 2개월간 올린 릴스 26편 중 15편이 1만 조회를 넘었습니다.",
   w4t:"직접 다녀온 사람의 경험", w4d:"30개국 100개 도시를 다닌 30대 직장인의 시선으로, 휴가를 쪼개 여행하는 직장인에게 닿습니다.",
-  ftTitle:"대표 콘텐츠", views:"조회", likes:"좋아요", saves:"저장", shares:"공유", watch:"릴스 보러가기 ↗",
-  reels:[
-    {t:"이게뭐야??"},
-    {t:"성수기 인천공항 줄, 이걸로 줄여보세요", d:"출국 직전에 바로 써먹는 정보라 저장보다 공유가 더 많았습니다. 같이 떠나는 사람에게 보내는 콘텐츠입니다."},
-    {t:"솔직히 대만은 먹으러가는거잖아요??", d:"저장률 2.14%. 여행 계획 단계에서 저장해 두는 먹거리 리스트형 콘텐츠입니다."},
-    {t:"2026년 11월, 보조배터리 확인필수!!", d:"시기가 정해진 규정 정보라 \"지금 알아야 하는\" 내용으로 퍼졌습니다."},
-    {t:"이거 모르는 분 진짜 많더라고요!"}
-  ],
+  bnTitle:"조회수가 잘 나오고 있습니다", bnDesc:"최근 2개월 동안 조회수가 높았던 릴스를 모았습니다.", bnBtn:"최근 성과 보기 →",
   coTitle:"협업 형태",
   f1t:"릴스", f1d:"제품·서비스를 실제 여행 상황에 녹인 숏폼 1편",
   f2t:"캐러셀", f2d:"저장해 두고 보는 정보형 카드뉴스",
@@ -322,30 +178,27 @@ ko:{
   f5t:"숙소·현지 체험", f5d:"해외 현지에서 촬영하는 방문 콘텐츠",
   coNote:"단가, 2차 활용, 업로드 일정은 문의 주시면 안내드립니다.",
   adTitle:"진행한 광고", a1t:"해외 로밍", a1d:"릴스 · 2026년 11월", a2t:"여행 캐리어", a2d:"릴스 · 2026년 10월",
-  copy:"이메일 복사", copied:"복사됨 ✓", foot:"루카스 | 여행 · Media Kit", sep:","
+  copy:"이메일 복사", copied:"복사됨 ✓", foot:"루카스 | 여행 · Media Kit"
 },
 en:{
   kicker:"Travel Creator", name:"Lucas",
   lead:"I'm Lucas, a full-time office worker who has traveled to 30 countries and 100 cities. From pre-departure prep to local routes, I share only what I've checked in person, in short-form video.",
   mSite:"Website", mMail:"Collaborations", photoAlt:"Lucas seated by the window of a restaurant in Paris",
-  h1l:"Instagram followers", h2n:"5.95M", h2l:"Reel views, last 2 months", h3n:"5.08M", h3l:"Views on the top Reel",
-  chTitle:"Channel metrics",
-  n1:"6,136", c1:"Followers", n2:"5,952,085", c2:"Total Reel views, last 2 months", n3:"15", c3:"Reels over 10K views (of 26)",
-  n4:"5,076,556", c4:"Top Reel views (Oct 7)", n5:"387K", c5:"Views, Nov 1–13 (5 Reels)", c6:"Total posts",
-  chNote:"As of November 13, 2026. Reel figures are Instagram Insights totals for the 26 Reels posted September 10 – November 11. Of the total views, 5.08M come from a single Reel posted October 7.",
+  h1n:"6,136", h1l:"Instagram followers", h2n:"5.95M", h2l:"Reel views, last 2 months", h3n:"5.08M", h3l:"Views on the top Reel",
+  abTitle:"Practical travel that first-timers can follow",
+  ab1:"I'm an office worker in my 30s who travels on split-up vacation days. After 30 countries and 100 cities, I pick only what I have experienced and checked myself, and turn it into information you can use right away, from pre-departure prep to local routes.",
+  ab2:"The account is less about beautiful views and more about what to actually do. How to shorten airport lines, food that won't disappoint, rules that just changed: what people need right before a trip, posted as short-form video and carousels.",
+  t1t:"Airport & pre-departure", t1d:"Shorter lines, terminal tips, carry-on rules",
+  t2t:"Local food & routes", t2d:"Places I have eaten at and the routes I took",
+  t3t:"Getting around & booking", t3d:"Roaming and eSIM, transport, discounts",
+  t4t:"Travel updates", t4d:"Rule changes and what to know for the season",
+  chTitle:"Channels", ch1:"@everywhere.lucas · short-form video and carousels", ch2t:"Naver Blog", ch2:"Detailed reviews in photos and text (Korean)", ch3:"Travel guides, restaurant maps, gear picks",
   whyTitle:"Why it fits your brand",
   w1t:"Viewers are about to fly", w1d:"Airport and pre-departure prep is the most covered topic, and it is also where new follows grow fastest. It fits what people choose before they leave: travel gear, roaming and eSIM, luggage, flights and stays.",
-  w2t:"Useful content people save and share", w2d:"The Incheon Airport queue Reel earned 2,404 saves and 3,115 shares. The Taiwan food Reel earned 2,868 saves and 3,132 shares.",
-  w3t:"Reach beyond the follower count", w3d:"On an account with about 6,000 followers, 15 of the 26 Reels posted in the last two months passed 10,000 views.",
+  w2t:"Useful content people save and share", w2d:"The information is usable right before departure, so people share it with whoever they are traveling with and save it while planning.",
+  w3t:"Reach beyond the follower count", w3d:"Of the 26 Reels posted in the last two months, 15 passed 10,000 views.",
   w4t:"First-hand experience", w4d:"The view of an office worker in his 30s who has been to 30 countries and 100 cities. It speaks to working people who travel on limited time off.",
-  ftTitle:"Featured content", views:"Views", likes:"Likes", saves:"Saves", shares:"Shares", watch:"Watch the Reel ↗",
-  reels:[
-    {t:"What is this??"},
-    {t:"Peak-season lines at Incheon Airport? Try this", d:"Usable right before departure, so it drew more shares than saves. People send it to whoever they are traveling with."},
-    {t:"Honestly, you go to Taiwan to eat, right??", d:"Save rate 2.14%. A food-list Reel people save while planning a trip."},
-    {t:"November 2026: check your power bank!!", d:"Rule information tied to a date, so it spread as something people need to know now."},
-    {t:"So many people don't know this!"}
-  ],
+  bnTitle:"The views are coming in", bnDesc:"A collection of the most viewed Reels from the last two months.", bnBtn:"See recent results →",
   coTitle:"Ways to work together",
   f1t:"Reel", f1d:"One short-form video that puts your product or service into a real travel situation",
   f2t:"Carousel", f2d:"An informational carousel post people save for later",
@@ -354,30 +207,27 @@ en:{
   f5t:"Stays & local experiences", f5d:"On-site content filmed at the destination abroad",
   coNote:"Rates, secondary usage and posting schedule are available on request.",
   adTitle:"Past sponsored work", a1t:"International roaming", a1d:"Reel · November 2026", a2t:"Travel luggage", a2d:"Reel · October 2026",
-  copy:"Copy email", copied:"Copied ✓", foot:"Lucas | Travel · Media Kit", sep:","
+  copy:"Copy email", copied:"Copied ✓", foot:"Lucas | Travel · Media Kit"
 },
 ja:{
   kicker:"トラベルクリエイター", name:"ルーカス",
   lead:"30か国・100都市を旅した会社員ルーカス。出国準備から現地のコースまで、自分で確かめた情報だけをショート動画で届けます。",
   mSite:"ホームページ", mMail:"お仕事のご依頼", photoAlt:"パリのレストランの窓際に座るルーカス",
-  h1l:"Instagramフォロワー", h2n:"595万", h2l:"直近2か月のリール再生", h3n:"508万", h3l:"最高再生リール1本",
-  chTitle:"チャンネル指標",
-  n1:"6,136", c1:"フォロワー", n2:"5,952,085", c2:"直近2か月のリール総再生", n3:"15本", c3:"1万再生超えのリール(26本中)",
-  n4:"5,076,556", c4:"最高再生リール(10/7)", n5:"39万", c5:"11月1〜13日の再生(5本)", c6:"累計投稿",
-  chNote:"2026年11月13日時点。リールの数値は9月10日〜11月11日に投稿した26本のInstagramインサイト合計で、総再生のうち508万は10月7日のリール1本によるものです。",
+  h1n:"6,136", h1l:"Instagramフォロワー", h2n:"595万", h2l:"直近2か月のリール再生", h3n:"508万", h3l:"最高再生リール1本",
+  abTitle:"初めての人でも真似できる実践的な旅",
+  ab1:"ルーカスは、休みをやりくりして旅する30代の会社員です。30か国・100都市を巡り、自分で体験して確かめたことだけを選び、出国準備から現地のコースまで、すぐに使える情報として届けます。",
+  ab2:"きれいな景色よりも、実際にどうすればいいかを伝えるアカウントです。空港の行列を短くする方法、現地で失敗しないグルメ、変わったばかりのルールなど、旅行直前に必要な内容をショート動画とカルーセルで投稿しています。",
+  t1t:"空港・出国準備", t1d:"行列を短くする方法、ターミナルの使い方、機内持ち込みルール",
+  t2t:"現地グルメ・コース", t2d:"実際に行ったお店と回り方",
+  t3t:"移動・予約", t3d:"ローミング・eSIM、交通、割引情報",
+  t4t:"旅行ニュース", t4d:"変更されたルールと時期ごとに知っておくべきこと",
+  chTitle:"運営チャンネル", ch1:"@everywhere.lucas · ショート動画とカルーセル", ch2t:"NAVERブログ", ch2:"写真と文章での詳細レビュー(韓国語)", ch3:"旅行ガイド、グルメマップ、おすすめアイテム",
   whyTitle:"ブランドと相性が良い理由",
   w1t:"出国直前の人が見ています", w1d:"空港・出国準備が最も多く扱うテーマで、新規フォローもこのテーマで最も伸びます。旅行グッズ、ローミング・eSIM、スーツケース、航空券・宿泊など、出発前に選ぶ商品と相性が良いです。",
-  w2t:"保存・シェアされる情報コンテンツ", w2d:"仁川空港の行列を短くする方法は保存2,404・シェア3,115、台湾グルメは保存2,868・シェア3,132を記録しました。",
-  w3t:"フォロワー数以上に届きます", w3d:"フォロワー6千人台のアカウントで、直近2か月に投稿したリール26本のうち15本が1万再生を超えました。",
+  w2t:"保存・シェアされる情報コンテンツ", w2d:"出国直前にすぐ使える情報のため、一緒に旅立つ人にシェアされ、旅行の計画段階で保存されます。",
+  w3t:"フォロワー数以上に届きます", w3d:"直近2か月に投稿したリール26本のうち15本が1万再生を超えました。",
   w4t:"実際に行った人の経験", w4d:"30か国・100都市を旅した30代会社員の目線で、休みをやりくりして旅する会社員に届きます。",
-  ftTitle:"代表コンテンツ", views:"再生", likes:"いいね", saves:"保存", shares:"シェア", watch:"リールを見る ↗",
-  reels:[
-    {t:"これ何??"},
-    {t:"繁忙期の仁川空港の行列、これで短くしましょう", d:"出国直前にすぐ使える情報のため、保存よりシェアが多くなりました。一緒に旅立つ人に送るコンテンツです。"},
-    {t:"正直、台湾は食べに行く所ですよね??", d:"保存率2.14%。旅行の計画段階で保存しておくグルメリスト型コンテンツです。"},
-    {t:"2026年11月、モバイルバッテリー要確認!!", d:"時期が決まっている規定の情報のため、「今知っておくべき」内容として広がりました。"},
-    {t:"これ知らない人、本当に多いんです!"}
-  ],
+  bnTitle:"再生数が伸びています", bnDesc:"直近2か月で再生数の多かったリールをまとめました。", bnBtn:"最近の実績を見る →",
   coTitle:"コラボレーションの形",
   f1t:"リール", f1d:"商品・サービスを実際の旅行シーンに溶け込ませたショート動画1本",
   f2t:"カルーセル", f2d:"保存して見返す情報型のカルーセル投稿",
@@ -386,30 +236,27 @@ ja:{
   f5t:"宿泊・現地体験", f5d:"海外の現地で撮影する訪問コンテンツ",
   coNote:"料金、二次利用、投稿スケジュールはお問い合わせいただければご案内します。",
   adTitle:"これまでのPR案件", a1t:"海外ローミング", a1d:"リール · 2026年11月", a2t:"スーツケース", a2d:"リール · 2026年10月",
-  copy:"メールをコピー", copied:"コピーしました ✓", foot:"ルーカス | 旅行 · Media Kit", sep:","
+  copy:"メールをコピー", copied:"コピーしました ✓", foot:"ルーカス | 旅行 · Media Kit"
 },
 it:{
   kicker:"Creator di viaggi", name:"Lucas",
   lead:"Sono Lucas, lavoro in ufficio a tempo pieno e ho visitato 30 paesi e 100 città. Dai preparativi prima della partenza agli itinerari sul posto, racconto in video brevi solo ciò che ho verificato di persona.",
   mSite:"Sito web", mMail:"Collaborazioni", photoAlt:"Lucas seduto accanto alla finestra di un ristorante a Parigi",
-  h1l:"Follower su Instagram", h2n:"5,95 mln", h2l:"Visualizzazioni Reel, ultimi 2 mesi", h3n:"5,08 mln", h3l:"Visualizzazioni del Reel più visto",
-  chTitle:"I numeri del canale",
-  n1:"6.136", c1:"Follower", n2:"5.952.085", c2:"Visualizzazioni totali dei Reel, ultimi 2 mesi", n3:"15", c3:"Reel oltre 10.000 visualizzazioni (su 26)",
-  n4:"5.076.556", c4:"Reel più visto (7 ott)", n5:"387 mila", c5:"Visualizzazioni, 1–13 nov (5 Reel)", c6:"Post pubblicati",
-  chNote:"Dati al 13 novembre 2026. I numeri dei Reel sono la somma degli Insights di Instagram per i 26 Reel pubblicati dal 10 settembre all'11 novembre. Delle visualizzazioni totali, 5,08 milioni provengono da un solo Reel del 7 ottobre.",
+  h1n:"6.136", h1l:"Follower su Instagram", h2n:"5,95 mln", h2l:"Visualizzazioni Reel, ultimi 2 mesi", h3n:"5,08 mln", h3l:"Visualizzazioni del Reel più visto",
+  abTitle:"Viaggi pratici, anche per chi parte la prima volta",
+  ab1:"Ho trent'anni, lavoro in ufficio e viaggio usando pochi giorni di ferie alla volta. Dopo 30 paesi e 100 città scelgo solo ciò che ho vissuto e verificato di persona e lo trasformo in informazioni da usare subito, dai preparativi agli itinerari sul posto.",
+  ab2:"Più che bei panorami, il profilo spiega che cosa fare in concreto. Come ridurre le code in aeroporto, dove mangiare senza sbagliare, le regole appena cambiate: ciò che serve subito prima di partire, in video brevi e caroselli.",
+  t1t:"Aeroporto e partenza", t1d:"Meno code, consigli sui terminal, regole per il bagaglio a mano",
+  t2t:"Cibo e itinerari", t2d:"Locali provati di persona e percorsi",
+  t3t:"Spostamenti e prenotazioni", t3d:"Roaming ed eSIM, trasporti, sconti",
+  t4t:"Novità di viaggio", t4d:"Regole cambiate e cose da sapere per il periodo",
+  chTitle:"Canali", ch1:"@everywhere.lucas · video brevi e caroselli", ch2t:"Naver Blog", ch2:"Recensioni dettagliate con foto e testo (in coreano)", ch3:"Guide di viaggio, mappe dei ristoranti, accessori consigliati",
   whyTitle:"Perché funziona per il tuo brand",
   w1t:"Lo guarda chi sta per partire", w1d:"Aeroporto e preparativi sono il tema più trattato, ed è anche quello che porta più nuovi follower. È il contesto giusto per ciò che si sceglie prima di partire: accessori da viaggio, roaming ed eSIM, valigie, voli e alloggi.",
-  w2t:"Contenuti utili da salvare e condividere", w2d:"Il Reel sulle code all'aeroporto di Incheon ha ottenuto 2.404 salvataggi e 3.115 condivisioni. Quello sul cibo di Taiwan 2.868 salvataggi e 3.132 condivisioni.",
-  w3t:"Arriva oltre i follower", w3d:"Con circa 6.000 follower, 15 dei 26 Reel pubblicati negli ultimi due mesi hanno superato le 10.000 visualizzazioni.",
+  w2t:"Contenuti utili da salvare e condividere", w2d:"Sono informazioni da usare subito prima di partire: si condividono con chi viaggia insieme e si salvano mentre si pianifica.",
+  w3t:"Arriva oltre i follower", w3d:"Dei 26 Reel pubblicati negli ultimi due mesi, 15 hanno superato le 10.000 visualizzazioni.",
   w4t:"L'esperienza di chi c'è stato", w4d:"Lo sguardo di un trentenne che lavora in ufficio e ha visitato 30 paesi e 100 città. Parla a chi viaggia con pochi giorni di ferie.",
-  ftTitle:"Contenuti in evidenza", views:"Visualizzazioni", likes:"Mi piace", saves:"Salvataggi", shares:"Condivisioni", watch:"Guarda il Reel ↗",
-  reels:[
-    {t:"Ma cos'è??"},
-    {t:"Code a Incheon in alta stagione? Prova così", d:"Informazioni da usare subito prima di partire: più condivisioni che salvataggi. È un contenuto da inviare a chi parte con te."},
-    {t:"Diciamolo: a Taiwan si va per mangiare, no??", d:"Tasso di salvataggio 2,14%. Una lista di cibi da salvare mentre si pianifica il viaggio."},
-    {t:"Novembre 2026: controlla il power bank!!", d:"Una regola legata a una data precisa: si è diffuso come informazione da sapere adesso."},
-    {t:"Tantissimi non lo sanno!"}
-  ],
+  bnTitle:"Le visualizzazioni crescono", bnDesc:"Una raccolta dei Reel più visti degli ultimi due mesi.", bnBtn:"Vedi i risultati recenti →",
   coTitle:"Formati di collaborazione",
   f1t:"Reel", f1d:"Un video breve che inserisce il prodotto o servizio in una vera situazione di viaggio",
   f2t:"Carosello", f2d:"Un carosello informativo da salvare e rileggere",
@@ -418,78 +265,10 @@ it:{
   f5t:"Alloggi ed esperienze", f5d:"Contenuti girati sul posto, a destinazione",
   coNote:"Tariffe, riutilizzo dei contenuti e calendario di pubblicazione su richiesta.",
   adTitle:"Collaborazioni sponsorizzate", a1t:"Roaming internazionale", a1d:"Reel · novembre 2026", a2t:"Valigia da viaggio", a2d:"Reel · ottobre 2026",
-  copy:"Copia email", copied:"Copiata ✓", foot:"Lucas | Viaggi · Media Kit", sep:"."
+  copy:"Copia email", copied:"Copiata ✓", foot:"Lucas | Viaggi · Media Kit"
 }
 };
-
-const REELS = [
-  {id:"DeLsNEvoIgf", date:"2026.10.07", v:5076556, l:5454, s:1374, sh:1045},
-  {id:"DfilzIzBJNj", date:"2026.11.10", v:194260, l:562, s:2404, sh:3115},
-  {id:"DedOlEghXyI", date:"2026.10.14", v:133907, l:811, s:2868, sh:3132},
-  {id:"DfPY_QnoU-g", date:"2026.11.02", v:113685, l:470, s:922, sh:858},
-  {id:"DfEReMfIkBm", date:"2026.10.29", v:87487, l:245, s:1157, sh:642}
-];
-const EMAIL = "everywherelucas365@gmail.com";
-const LANGS = ["ko","en","ja","it"];
-let lang = "ko";
-
-function el(tag, cls, text){ const e = document.createElement(tag); if(cls) e.className = cls; if(text != null) e.textContent = text; return e; }
-function num(n, sep){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep); }
-function chip(label, value, main){ const c = el("span", "chip" + (main ? " main" : ""), label); c.appendChild(el("b", null, value)); return c; }
-
-function render(){
-  const t = T[lang];
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-t]").forEach(n => { n.textContent = t[n.dataset.t]; });
-  document.querySelectorAll("[data-home]").forEach(n => { n.href = lang === "ko" ? "/" : "/en/"; });
-  document.querySelectorAll("[data-alt]").forEach(n => { n.alt = t[n.dataset.alt]; });
-  document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
-  const list = document.getElementById("reels");
-  list.textContent = "";
-  REELS.forEach((r, i) => {
-    const li = el("li", "reel");
-    li.appendChild(el("div", "rank", String(i + 1).padStart(2, "0")));
-    const body = el("div");
-    const h = el("h4", null, t.reels[i].t);
-    h.appendChild(el("time", null, r.date));
-    body.appendChild(h);
-    if(lang !== "ko"){ const o = el("div", "orig", T.ko.reels[i].t); o.lang = "ko"; body.appendChild(o); }
-    const chips = el("div", "chips");
-    chips.append(chip(t.views, num(r.v, t.sep), true), chip(t.likes, num(r.l, t.sep)), chip(t.saves, num(r.s, t.sep)), chip(t.shares, num(r.sh, t.sep)));
-    body.appendChild(chips);
-    if(t.reels[i].d) body.appendChild(el("p", "why", t.reels[i].d));
-    const a = el("a", "pill sm", t.watch);
-    a.href = "https://www.instagram.com/reel/" + r.id + "/"; a.target = "_blank"; a.rel = "noopener";
-    body.appendChild(a);
-    li.appendChild(body);
-    list.appendChild(li);
-  });
-}
-
-function fromHash(){ const h = location.hash.replace("#", ""); return LANGS.includes(h) ? h : null; }
-function initial(){
-  const h = fromHash(); if(h) return h;
-  const nav = (navigator.language || "ko").slice(0, 2).toLowerCase();
-  return LANGS.includes(nav) ? nav : "en";
-}
-document.querySelectorAll(".langs button").forEach(b => b.addEventListener("click", () => {
-  lang = b.dataset.lang; render();
-  try { history.replaceState(null, "", "#" + lang); } catch(e) { location.hash = lang; }
-}));
-window.addEventListener("hashchange", () => { const h = fromHash(); if(h && h !== lang){ lang = h; render(); } });
-
-document.getElementById("copy").addEventListener("click", async (ev) => {
-  const btn = ev.currentTarget;
-  try { await navigator.clipboard.writeText(EMAIL); btn.textContent = T[lang].copied; }
-  catch(e) {
-    const r = document.createRange(); r.selectNodeContents(document.querySelector(".mail"));
-    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
-  }
-  setTimeout(() => { btn.textContent = T[lang].copy; }, 1800);
-});
-
-lang = initial();
-render();
 </script>
+<script src="kit.js"></script>
 </body>
 </html>
