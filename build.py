@@ -178,6 +178,7 @@ def page(lang):
       <a href="#items">{t['nav_items']}</a>
       <a href="#channels">{t['nav_channels']}</a>
       <a href="#contact">{t['nav_contact']}</a>
+      <a href="{pre}mediakit/#{lang}">{t.get('nav_mediakit', 'Media Kit' if lang == 'en' else '협업')}</a>
     </div>
     <div class="lang">
       <a href="{pre or './'}" hreflang="ko"{' class="on"' if lang == 'ko' else ''}>KR</a>
@@ -254,6 +255,7 @@ def page(lang):
       <div class="ct-actions">
         <a class="btn neon" id="mailBtn" href="mailto:{e(C['email'].strip())}" data-email="{e(C['email'].strip())}">{t['ct_btn']}</a>
         <button type="button" class="ct-copy" id="mailCopy" data-email="{e(C['email'].strip())}" data-done="{e(t.get('ct_copied', '복사했어요 ✓'))}">{e(C['email'].strip())} · {e(t.get('ct_copy', '주소 복사'))}</button>
+        <a class="ct-kit" href="{pre}mediakit/#{lang}">{t.get('ct_mediakit', 'View media kit →' if lang == 'en' else '미디어킷 보기 →')}</a>
       </div>
     </div>
   </div>
@@ -285,11 +287,13 @@ def main():
         shutil.copy(ROOT / f, DIST / f)
     if (ROOT / "images").exists():
         shutil.copytree(ROOT / "images", DIST / "images")
+    if (ROOT / "mediakit").exists():      # 미디어킷 페이지(/mediakit/) — 한·영·일·이 4개 언어, 폴더째 그대로 올려요
+        shutil.copytree(ROOT / "mediakit", DIST / "mediakit")
     (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE}sitemap.xml\n", encoding="utf-8")
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        f"  <url><loc>{SITE}</loc></url>\n  <url><loc>{SITE}en/</loc></url>\n</urlset>\n",
+        f"  <url><loc>{SITE}</loc></url>\n  <url><loc>{SITE}en/</loc></url>\n  <url><loc>{SITE}mediakit/</loc></url>\n</urlset>\n",
         encoding="utf-8")
     print("완료: dist/index.html, dist/en/index.html")
 

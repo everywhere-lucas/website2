@@ -197,3 +197,5 @@ html,body{overflow-x:clip}
 .ct-copy{font:inherit;font-size:13px;background:none;border:0;color:#fff;opacity:.75;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:2px 0}
 .ct-copy:hover{opacity:1}
 @media(max-width:760px){.ct-actions{align-items:flex-start}}
+.ct-kit{display:inline-flex;align-items:center;padding:11px 18px;border-radius:999px;border:1.5px solid rgba(255,255,255,.6);font-weight:700;font-size:14px;color:#fff}
+.ct-kit:hover{background:rgba(255,255,255,.12)}
